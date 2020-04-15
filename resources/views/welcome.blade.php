@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                   Github to Heroku deploment
                 </div>
 
                 <div class="links">
