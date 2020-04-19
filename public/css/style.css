@@ -261,14 +261,19 @@ footer{
 .contact-header p{
  
    margin: 0 auto;
+   width: 50%;
 
 }
+
 .contact-form{
     padding-bottom:1rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .contact-form form{
     margin-top: 50px;
-    width: 500px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -286,17 +291,39 @@ color:#0AA1D9 ;
     background-color: #0AA1D9; 
 }
 .textarea-label{
-    padding:0.5rem;
+   padding:5px 13px;
+   font-size: 14px;
 }
 .contact-textarea{
     margin: 0;
+    padding-right:14px;
+    padding-top:10px;
+  
+   
 }
 .contact-btn{
     padding:0.5rem;
     width: 100%;
     margin-top: 10px;
     margin-bottom: 50px;
+    transition: 0.1s;
 }
+.contact-btn:hover{
+    background-color: rgba(10, 10, 10, 0.9);
+}
+.contact-input{
+ padding-right: 39px;
+   
+}
+.subject-prefext{
+    padding-right: 21px;
+}
+.message{
+  
+   width: 102%;
+   
+}
+
 
 
 
@@ -377,4 +404,13 @@ color:#0AA1D9 ;
     .navbar ul li a:hover{
         border:none;
     }
+    .contact-form{
+        width: 90%;
+    }
+    .message{
+  
+        width: 104%;
+        
+     }
+   
 }
