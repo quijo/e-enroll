@@ -61,16 +61,10 @@ body, html {
     border-bottom: solid 3px black; 
 }
 
-
-.banner-logo{
-    /* border: solid 1px red; */
-}
 .banner-logo img{
     margin-top: 10px;
     width: 75px;
     height: 75px;
-
-    /* border: solid 1px red; */
 }
 .banner-logo h3{
    margin-top: 25px;
@@ -210,7 +204,7 @@ footer{
 
 /* ---------------------------------end home css ---------------------------------*/
 
-/* ---------------------------------start basic education css---------------------------------*/
+/* ---------------------------------start basic education css and college---------------------------------*/
 
 .basiced-container{
     display: flex;
@@ -234,16 +228,74 @@ footer{
     margin: 0 auto;
 
 }
-.basiced-payform{
-   
-}
+
 .students-form, .parents-form{
    /* border: solid 1px red; */
    flex: 1 1 auto;
    padding:1rem;
-   flex-direction: column;
-   
+   flex-direction: column;  
+}
 
+/* ---------------------------------end home basiced and college ---------------------------------*/
+
+/* ---------------------------------start contact form---------------------------------*/
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#0AA1D9 ;
+}
+.contact-header{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    text-align: center;
+    background-color: black;
+    color: #0AA1D9;  
+}
+
+.contact-header p{
+ 
+   margin: 0 auto;
+
+}
+.contact-form{
+    padding-bottom:1rem;
+}
+.contact-form form{
+    margin-top: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.border-0{
+    border-radius: 0;
+    
+}
+.bg-black{
+    background-color: black;
+}
+.text-blue{
+color:#0AA1D9 ;
+}
+.bg-blue{
+    background-color: #0AA1D9; 
+}
+.textarea-label{
+    padding:0.5rem;
+}
+.contact-textarea{
+    margin: 0;
+}
+.contact-btn{
+    padding:0.5rem;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 
@@ -291,6 +343,7 @@ footer{
         justify-content: flex-start;
         background-color: none;
         padding:20px;
+       
      
     }
     .bluebox{
