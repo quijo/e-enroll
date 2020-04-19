@@ -1,0 +1,327 @@
+/* blue = #0AA1D9 */
+/* 
+navbar-expand-sm = mobile menu on xs screens <576px
+navbar-expand-md = mobile menu on sm screens <768px
+navbar-expand-lg = mobile menu on md screens <992px
+navbar-expand-xl = mobile menu on lg screens <1200px
+navbar-expand = never use mobile menu
+(no expand class) = always use mobile menu
+ */
+*{
+    padding:0;
+    margin:0;
+}
+body, html {
+    height: 100%;
+  }
+.nav-bg{
+    background-color:#0AA1D9 ;
+}
+.logo{
+    background-color: black;
+    
+}
+.logo a{
+    text-align: center;
+    padding:1rem;
+    width: 100%;
+    
+}
+.navbar{
+    padding:0;
+}
+.navbar-toggler{
+    /* background-color: black; */
+    border-radius:0 ;
+
+}
+.navbar ul{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+
+}
+.navbar ul li{
+    /* border:solid 1px red; */
+    height: 60px;
+}
+.navbar ul li a{
+    /* border:solid 1px red; */
+    height: 58px;
+    line-height: 45px; 
+    color:white;
+}
+.navbar ul li a:hover{
+    color: black;
+    border-bottom: solid 3px black;
+    transition: ease-out 0.3s;
+}
+.active-link{
+    color: black;
+    border-bottom: solid 3px black; 
+}
+
+
+.banner-logo{
+    /* border: solid 1px red; */
+}
+.banner-logo img{
+    margin-top: 10px;
+    width: 75px;
+    height: 75px;
+
+    /* border: solid 1px red; */
+}
+.banner-logo h3{
+   margin-top: 25px;
+   margin-left: 15px;
+}
+
+/* --------------------------------------------------------------------- */
+.banner-box{
+    display: flex;
+    margin-top: 10px;
+    width:100%;
+    height:auto;
+    /* border:solid 1px red; */
+    background-image: url('../images/diagonalbox.png');
+    background-color:#0AA1D9 ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: flex-end;
+    justify-content: space-around;
+    overflow: hidden;
+ 
+}
+.prereg-form{
+   /* border:solid 1px red; */
+
+    flex:1 1 25%;
+    padding:30px;
+    color:#0AA1D9;
+   
+    
+}
+
+.buttons{
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    padding:10px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+}
+.btn-top{
+   width: 45%;
+   border-radius: 20px;
+   padding:5px;
+   outline: none;
+   background-color:#0AA1D9 ;
+   color:white;
+   border: none;
+   transition: ease-in 0.1s;
+  
+}
+.btn-top:focus{
+    outline: none;
+}
+.btn-top:hover{
+    background-color:rgb(38, 155, 197,0.8)  ;
+}
+.btn-bottom{
+    width: 95%;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding:5px;
+    background-color:rgba(255, 255, 255,)  ;
+}
+.btn-bottom:hover{
+    background-color:rgba(255, 255, 255,0.8) 
+}
+
+.btn-bottom:focus{
+    outline:none;
+}
+
+
+.banner-logo{
+    display: flex;
+}
+.bluebox{
+    flex:0.5 1 30%;
+}
+.bluebox h1{
+    /* border: solid   1px red; */
+    margin-top: 100px;
+    margin-left: 25px;
+
+}
+
+/* -------------------------------------------------------------------- */
+footer{
+    margin-top: 14px;
+    display: flex;
+    padding:1rem;
+    background-color: #0AA1D9;
+}
+.theme{
+    text-align: center;
+}
+.theme h3{
+    margin-top: 20px;
+    font-size: 20px;
+}
+.facebook{
+    display:flex;
+    padding:0.1rem;
+  
+}
+.facebook p{
+
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.messenger{
+    display: flex;
+    padding:0.1rem;
+}
+.messenger p{
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+.fab{
+    font-size: 20px;
+}
+.fas{
+    font-size: 20px;
+}
+.world{
+    display: flex;
+    padding:0.1rem;
+}
+.world p{
+    margin-left: 10px;;
+    margin-bottom: 0;
+}
+
+/* ---------------------------------end home css ---------------------------------*/
+
+/* ---------------------------------start basic education css---------------------------------*/
+
+.basiced-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color:#0AA1D9;
+    
+}
+.basiced-container h1{
+    background-color: black;
+    color:#0AA1D9;
+    text-align: center;
+    padding:1rem;
+}
+.basiced-regform{
+    padding-top:30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+
+}
+.basiced-payform{
+   
+}
+.students-form, .parents-form{
+   /* border: solid 1px red; */
+   flex: 1 1 auto;
+   padding:1rem;
+   flex-direction: column;
+   
+
+}
+
+
+
+
+
+@media (max-width: 500px){
+    .collpase .navbar-collapse{
+        width: 300px;
+        border-color: solid red 1px;
+    }
+    .banner-box{
+        background-image: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: none;
+        padding:20px;
+     
+    }
+    .bluebox{
+        /* border:solid 1px red; */
+        padding:20px;
+    }
+    .bluebox h1{
+        margin: 0;
+        text-align: center;
+    }
+    .prereg-form{
+        padding:20px;
+        background-color: black;
+    }
+    .buttons{
+        margin: 0;
+        padding:0;
+    }
+}
+
+
+
+@media (max-width: 768px){
+
+    .banner-box{
+        background-image: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: none;
+        padding:20px;
+     
+    }
+    .bluebox{
+        /* border:solid 1px red; */
+        padding:20px;
+    }
+    .bluebox h1{
+        margin: 0;
+        text-align: center;
+    }
+    .prereg-form{
+        padding:20px;
+        background-color: black;
+    }
+    .buttons{
+        margin: 0;
+        padding:0;
+    }
+    .navbar ul{
+        margin-bottom: 20px;
+    }
+    .navbar ul li{
+        /* border:solid 1px red; */
+        height:40px;
+    }
+    .navbar ul li a{
+        /* border:solid 1px red; */
+        height:0px;
+     
+    }
+    .navbar ul li a:hover{
+        border:none;
+    }
+}
