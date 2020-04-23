@@ -15,7 +15,7 @@ body, html {
     height: 100%;
   }
 .nav-bg{
-    background-color:#0AA1D9 ;
+    background-color:#0aa1d9 ;
 }
 .logo{
     background-color: black;
@@ -240,6 +240,7 @@ footer{
 
 /* ---------------------------------start contact form---------------------------------*/
 .contact-container{
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,7 +250,6 @@ footer{
     display: flex;
     flex-flow: column;
     justify-content: center;
-    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     padding: 1rem;
@@ -307,6 +307,7 @@ color:#0AA1D9 ;
     margin-top: 10px;
     margin-bottom: 50px;
     transition: 0.1s;
+    background-color: black;
 }
 .contact-btn:hover{
     background-color: rgba(10, 10, 10, 0.9);

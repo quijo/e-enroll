@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"></script>
 
    
@@ -18,7 +18,7 @@
 </head>
 <body>
     
-            <nav class="navbar navbar-expand-md nav-bg  sticky-top  justify-content-end">
+            <nav class="navbar navbar-expand-md nav-bg  sticky-top  justify-content-end menu">
                 <div class="container" id="main-container">
                 <div class="logo">
                 <a class="navbar-brand" href="#">VNBC</a>
@@ -43,9 +43,7 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{url('contact')}}">CONTACT</a>
                             </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{{url('tuition')}}">TUTION FEES</a>
-                            </li>
+                
                             <li class="nav-item active">
                                 <a class="nav-link" href="{{url('login')}}">ADMIN</a>
                             </li>
@@ -63,13 +61,13 @@
     </div>
 
 
-
+<div class="up"style="width:50px;height:50px; background:green;position:fixed ; right:0; bottom:50px; right:20px; z-index:1000;visibility:hidden; " ></div>
 <footer>
 <div class="container">
     <div class="row">
         <div class="col-sm-6">
              <div class="theme">
-                <h3>"MENTORING TRANFORMATIONAL GRADUATES"</h3>
+                <h3>"MENTORING TRANSFORMATIONAL GRADUATES"</h3>
             </div>
         </div>
        <div class="col-sm-6">
@@ -89,12 +87,32 @@
 </div>
 </footer>
    
+<script>
+$(document).ready(function(){
+  $(window).scroll(function(){
+  	var scroll = $(window).scrollTop();
+	  if (scroll >70) {
+	    $(".menu").css("background" , "rgb(10, 161, 217, 0.9)");
+        $(".menu").css("transition" , "0.2s");
+        $(".up").css("visibility", "visible");
+        $(".up").css("transition" , "0.2s");
+        
+	  }
+	  else{
+		  $(".menu").css("background" , "#0aa1d9"); 
+          $(".up").css("visibility", "hidden") ;
+          $(".up").css("transition" , "0.2s");
+           
+	  }
+  })
+})
+</script>
 
 
-
-
-   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
