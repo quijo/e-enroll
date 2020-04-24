@@ -19,9 +19,9 @@
                         voluptate adipisicing mollit elit.</p>
 
                         <div class="buttons">
-                                <button class="btn-top">Basic Education</button>
-                                <button class="btn-top">College</button>
-                                <button class="btn-bottom">Contact Us</button>
+                                <a class="btn-top pre-enrollment-btn" href="{{url('/basiced') }}" type="button">Basic Education</a>
+                                <a class="btn-top pre-enrollment-btn" href="{{url('/college') }}">College</a>
+                                <a class="btn-bottom "  href="{{url('/contact') }}">Contact Us</a>
                         </div>
 
 

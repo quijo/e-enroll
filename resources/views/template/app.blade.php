@@ -31,16 +31,16 @@
                 <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
                     
                         <ul class="navbar-nav text-right mr-2">
-                            <li class="nav-item active">
+                            <li  class="nav-item {{ Request::is('/*') ? 'active-link' : '' }}">
                                 <a class="nav-link" href="{{url('/')}}">HOME</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item {{ Request::is('basiced*') ? 'active-link' : '' }}">
                                 <a class="nav-link" href="{{url('basiced')}}">BASIC ED</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item {{ Request::is('college*') ? 'active-link' : '' }}">
                                 <a class="nav-link" href="{{url('college')}}">COLLEGE</a>
                             </li>
-                            <li class="nav-item active">
+                            <li class="nav-item {{ Request::is('contact*') ? 'active-link' : '' }}">
                                 <a class="nav-link" href="{{url('contact')}}">CONTACT</a>
                             </li>
                 
@@ -61,7 +61,7 @@
     </div>
 
 
-<div class="up"style="width:50px;height:50px; background:green;position:fixed ; right:0; bottom:50px; right:20px; z-index:1000;visibility:hidden; " ></div>
+{{-- <div class="up"style="width:50px;height:50px; background:green;position:fixed ; right:0; bottom:50px; right:20px; z-index:1000;visibility:hidden; " ></div> --}}
 <footer>
 <div class="container">
     <div class="row">

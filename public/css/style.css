@@ -44,6 +44,16 @@ body, html {
 .navbar ul li{
     /* border:solid 1px red; */
     height: 60px;
+    transition: border-width 0.2s linear;
+}
+.navbar ul li:hover{
+    /* color: black; */
+    border-bottom: solid black; 
+    border-width: 3px;
+    
+}
+.navbar ul li a:hover{
+    color:black;
 }
 .navbar ul li a{
     /* border:solid 1px red; */
@@ -51,14 +61,21 @@ body, html {
     line-height: 45px; 
     color:white;
 }
-.navbar ul li a:hover{
+.nav ul li a:active{
+    color: black;
+}
+
+/* .navbar ul li a:hover{
     color: black;
     border-bottom: solid 3px black;
     transition: ease-out 0.3s;
-}
+} */
 .active-link{
     color: black;
     border-bottom: solid 3px black; 
+}
+.active-a{
+    color: black;
 }
 
 .banner-logo img{
@@ -125,15 +142,25 @@ body, html {
 .btn-top:hover{
     background-color:rgb(38, 155, 197,0.8)  ;
 }
-.btn-bottom{
+.btn-bottom {
     width: 95%;
     margin-top: 20px;
     border-radius: 20px;
     padding:5px;
-    background-color:rgba(255, 255, 255,)  ;
+    background-color:rgba(255, 255, 255,1)  ;
+    text-align: center;
 }
 .btn-bottom:hover{
-    background-color:rgba(255, 255, 255,0.8) 
+    background-color:rgba(255, 255, 255,0.8) ;
+    color:#0AA1D9;
+    text-decoration: none;
+}
+.pre-enrollment-btn{
+    text-align: center;
+}
+.pre-enrollment-btn:hover{
+    color:white;
+    text-decoration: none;
 }
 
 .btn-bottom:focus{
@@ -359,6 +386,7 @@ color:#0AA1D9 ;
         margin: 0;
         padding:0;
     }
+   
 }
 
 
@@ -413,5 +441,13 @@ color:#0AA1D9 ;
         width: 104%;
         
      }
+     .basiced-regform{
+         flex-direction: column;
+     }
+      .container{
+        margin:0 auto;
+        padding:0;
+        width: 100%;;
+    }
    
 }
