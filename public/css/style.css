@@ -87,7 +87,11 @@ body, html {
    margin-top: 25px;
    margin-left: 15px;
 }
-
+.logout-bg{
+    background-color: black;
+    border-radius: 0;
+    color:white;
+}
 /* --------------------------------------------------------------------- */
 .banner-box{
     display: flex;
