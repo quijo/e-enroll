@@ -166,15 +166,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
 
-
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> --}}
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-<script src="plugins/chart.js/chart.min.js"></script>
+{{-- <script src="plugins/chart.js/chart.min.js"></script> --}}
 <!-- AdminLTE App -->
 <script src="js/adminlte.js"></script>
 <script src="js/demo.js"></script>
