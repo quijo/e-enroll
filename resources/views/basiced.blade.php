@@ -9,12 +9,13 @@
                 <h1>BASIC EDUCATION</h1>
             </div>
 
-        <form>
+        <form method="POST"  action="">
+            @csrf
             <div class="basiced-regform">
 
                     <div class="students-form">
                         <h3>Student Info</h3>
-                       
+
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputfirstname_middlename">Firstname and Middlename
@@ -23,7 +24,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputlastname">Lastname</label>
-                                    <input name="lname" input type="text" class="form-control  border-0 " id="inputlastname" >                                    
+                                    <input name="lname" input type="text" class="form-control  border-0 " id="inputlastname" >
                                 </div>
                             </div>
 
@@ -38,9 +39,9 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputgradelevel">Grade Level</label>
-                                    <select input name="gradelevel" type="text" class="form-control  border-0" id="inputgradelevel" > 
+                                    <select input name="gradelevel" type="text" class="form-control  border-0" id="inputgradelevel" >
                                         <option>Nursery-AM</option>
-                                        <option>Nursery-PM</option> 
+                                        <option>Nursery-PM</option>
                                         <option>Kinder-AM</option>
                                         <option>Kinder-PM</option>
                                         <option>Grade 1</option>
@@ -55,10 +56,10 @@
                                         <option>Grade 10</option>
                                         <option>Grade 11</option>
                                         <option>Grade 12</option>
-                                    </select> 
+                                    </select>
                                 </div>
                             </div>
-                            
+
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -77,13 +78,13 @@
                                 <input name="address" type="text" class="form-control  border-0" id="inputAddress" placeholder="1234 Main St">
                             </div>
 
-                          
-                     
+
+
                     </div><!--student form-->
 
                     <div class="parents-form">
                         <h3>Parents Info</h3>
-    
+
                             <div class="form-group">
                                 <label for="inputfirstname_middlename_lastname">Name</label>
                                 <input name="name" type="text" class="form-control  border-0" id="inputname">
@@ -102,7 +103,7 @@
                                 <input name="email" type="text" class="form-control  border-0" id="inputemail">
                             </div>
 
-                              <button type="button" class="btn btn-dark  border-0" style="background-color:black;">Submit</button>
+                              <button type="submit" class="btn btn-dark  border-0" style="background-color:black;">Submit</button>
                     </div><!--parents form -->
             </div><!--basiced regestration form-->
             </form>
