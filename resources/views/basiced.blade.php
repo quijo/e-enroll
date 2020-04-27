@@ -9,7 +9,7 @@
                 <h1>BASIC EDUCATION</h1>
             </div>
 
-        <form method="POST"  action="">
+        <form method="POST"  action="{{}}">
             @csrf
             <div class="basiced-regform">
 

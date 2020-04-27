@@ -173,6 +173,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 <script src="plugins/chart.js/chart.min.js"></script>
 <!-- AdminLTE App -->
 <script src="js/adminlte.js"></script>
