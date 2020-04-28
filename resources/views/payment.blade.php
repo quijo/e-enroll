@@ -10,7 +10,7 @@
   <div class="container">
 
   <div class="alert alert-info" role="alert">
-    <span style="color:red;">IMPORTANT!</span> Thank you for filling up your reservation form.  Be informed that your transaction will become official as soon as you upload a scan or photo of
+    <span style="color:red;">IMPORTANT!</span> Thank you for filling up your reservation form.  Be informed that your transaction will become official as soon we recieve your uploaded scanned or photo of
      your proof of payment.  Thank you for choosing Visayan Nazarene Bible College as part of your learning.
     </div>
 
@@ -23,8 +23,9 @@
           <div class="card-body">
             <img class="card-img-top fluid" src="images/metrobank2.png"  style="width:60%">
            
-              <h6 style="font-size: calc(9px + 0.8vw);">Account Name:<br/> Visayan Nazarene Bible College</h6>
-              <h6 style="font-size: calc(9px + 0.8vw);">Account#:<br/> 1213-43535345-3456</></h6>
+              <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
+              <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 246-3-24655593-2</></h6>
+              <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Branch</></h6>
               <button type="button" class="btn btn-large btn-warning mb-4" data-toggle="modal" data-target="#exampleModal">Pay Now </button>
             
           </div>
@@ -34,10 +35,11 @@
       <div class="col-sm-4 mb-5">
         <div class="card card text-center h-100">
           <div class="card-body">
-            <img class="card-img-top fluid  mt-4 mb-4" src="img/credit/paypal.png"  style="width:70%">
+            <img class="card-img-top fluid mt-5 mb-5" src="images/psbank.png"  style="width:100%">
            
-              <h6 style="font-size: calc(9px + 0.8vw);">Account Name:<br/> Visayan Nazarene Bible College</h6>
-              <h6 style="font-size: calc(9px + 0.8vw);">Account#:<br/> 1213-43535345-3456</></h6>
+            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
+            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 110112000705</></h6>
+            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Branch</></h6>
               <button type="button" class="btn btn-large btn-warning mb-4" data-toggle="modal" data-target="#exampleModal">Pay Now </button>
             
           </div>
@@ -47,11 +49,12 @@
       <div class="col-sm-4 mb-5">
         <div class="card card text-center h-100">
           <div class="card-body">
-            <img class="card-img-top fluid mb-4 mt-4" src="images/gcash.jpg"  style="width:45%">
+            <img class="card-img-top fluid mb-4 mt-4" src="images/ecpay711.png"  style="width100%">
            
-              <h6 style="font-size: calc(9px + 0.8vw);">Account Name:<br/> Visayan Nazarene Bible College</h6>
-              <h6 style="font-size: calc(9px + 0.8vw);">Account#:<br/> 1213-43535345-3456</></h6>
-              <button type="button" class="btn btn-large btn-warning mb-4" data-toggle="modal" data-target="#exampleModal">Pay Now </button>
+            <h6 class="mt-3"style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold ">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
+            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 246-3-24655593-2</></h6>
+            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Branch</></h6>
+            <button type="button" class="btn btn-large btn-warning mb-4" data-toggle="modal" data-target="#exampleModal">Pay Now </button>
             
           </div>
         </div>
@@ -81,6 +84,11 @@
                   <div class="form-group">
                     <label for="recipient-name" class="col-form-label">Amount</label>
                     <input type="text" class="form-control" id="recipient-name">
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label">Please Upload deposit slip or reciept.</label>
+ 
+                    <input type="file" class="filestyle" data-icon="false">
                   </div>
               
               </div>

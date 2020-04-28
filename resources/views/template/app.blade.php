@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" type="text/css" href="fontawesome.min.css">
-
+   
     {{-- <link rel="stylesheet" href="css/adminlte.min.css"> --}}
 
 
@@ -93,13 +93,7 @@
    
 
 
-<script>
-    // Add the following code if you want the name of the file appear on select
-    $(".custom-file-input").on("change", function() {
-    var fileName = $(this).val().split("\\").pop();
-    $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-    });
-</script>
+
 
 <script>
 $(document).ready(function(){
