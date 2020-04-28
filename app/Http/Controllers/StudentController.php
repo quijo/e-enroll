@@ -38,7 +38,7 @@ class StudentController extends Controller
         $students = array(
             //for database                //from form submited
             'stud_fname_field'=>$request->stud_fname,
-            'stud_lname_field'=>$request->stud_fname,
+            'stud_lname_field'=>$request->stud_lname,
             'stud_gender_field'=>$request->stud_gender,
             'stud_grade_field'=>$request->stud_grade,
             'stud_birth_field'=>$request->stud_birth,
