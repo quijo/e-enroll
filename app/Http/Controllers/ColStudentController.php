@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Student;
+use App\colStudent;
 use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class ColStudentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-       
+        //
     }
 
     /**
@@ -35,21 +35,21 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $students = array(
+        $col_students = array(
             //for database                //from form submited
-            'stud_fname_field'=>$request->stud_fname,
-            'stud_lname_field'=>$request->stud_lname,
-            'stud_gender_field'=>$request->stud_gender,
-            'stud_grade_field'=>$request->stud_grade,
-            'stud_birth_field'=>$request->stud_birth,
-            'stud_bplace_field'=>$request->stud_bplace,
-            'stud_address_field'=>$request->stud_address,
-            'par_name_field'=>$request->par_name,
-            'par_contact_field'=>$request->par_contact,
-            'par_address_field'=>$request->par_address,
-            'par_email_field'=>$request->par_email,
+            'col_stud_fname_field'=>$request->col_fname,
+            'col_stud_lname_field'=>$request->col_lname,
+            'col_stud_gender_field'=>$request->col_gender,
+            'col_stud_course_field'=>$request->col_course,
+            'col_stud_birth_field'=>$request->col_birth,
+            'col_stud_bplace_field'=>$request->col_bplace,
+            'col_stud_address_field'=>$request->col_address,
+            'col_par_name_field'=>$request->col_par_name,
+            'col_par_contact_field'=>$request->col_par_contact,
+            'col_par_address_field'=>$request->col_par_address,
+            'col_par_email_field'=>$request->col_par_email,
         );
-        Student::create($students);
+        colStudent::create($col_students);
         
         //redirect to  payment mode
         return redirect('payment');
@@ -59,10 +59,10 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Student  $student
+     * @param  \App\colStudent  $colStudent
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function show(colStudent $colStudent)
     {
         //
     }
@@ -70,10 +70,10 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Student  $student
+     * @param  \App\colStudent  $colStudent
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit(colStudent $colStudent)
     {
         //
     }
@@ -82,10 +82,10 @@ class StudentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Student  $student
+     * @param  \App\colStudent  $colStudent
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request, colStudent $colStudent)
     {
         //
     }
@@ -93,10 +93,10 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Student  $student
+     * @param  \App\colStudent  $colStudent
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Student $student)
+    public function destroy(colStudent $colStudent)
     {
         //
     }

@@ -103,7 +103,7 @@
                                 <input name="par_email" id="par_email" type="text" class="form-control  border-0" >
                             </div>
 
-                              <button type="submit" class="btn btn-dark  border-0" style="background-color:black;">Submit</button>
+                              <button type="submit" name="submit" class="btn btn-dark  border-0" style="background-color:black;">Submit</button>
                     </div><!--parents form -->
             </div><!--basiced regestration form-->
             </form>

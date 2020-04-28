@@ -1,7 +1,13 @@
 
 @extends('template.app')
 
+
+
 @section('content')
+
+
+ 
+
 <div class="basiced-container">
 
   <div class="basiced-header">
@@ -121,6 +127,7 @@
     </div>
   </div><!--container-->
 </div><!--basic ed container-->
+
 @endsection
 
 
