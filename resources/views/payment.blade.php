@@ -18,42 +18,59 @@
 
     <div class="row">
 
-      <div class="col-sm-4 mb-5">
+      <div class="col-sm-3 mb-5">
         <div class="card card text-center h-100">
           <div class="card-body">
-            <img class="card-img-top fluid" src="images/metrobank2.png"  style="width:60%">
+            <img class="card-img-top fluid " src="images/metrobank2.png"  style="width:60%">
            
-              <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
-              <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 246-3-24655593-2</></h6>
-              <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Branch</></h6>
+              <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
+              <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 246-3-24655593-2</></h6>
+              <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Cebu City Branch</></h6>
               <button type="button" class="btn btn-large btn-warning mb-4" data-toggle="modal" data-target="#exampleModal">Pay Now </button>
             
           </div>
         </div>
       </div><!--col4-->
       
-      <div class="col-sm-4 mb-5">
+      <div class="col-sm-3 mb-5">
         <div class="card card text-center h-100">
           <div class="card-body">
-            <img class="card-img-top fluid mt-5 mb-5" src="images/psbank.png"  style="width:100%">
+            <img class="card-img-top fluid mt-4 mb-5" src="images/psbank.png"  style="width:100%">
            
-            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
-            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 110112000705</></h6>
-            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Branch</></h6>
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 110112000705</></h6>
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> MetrobankBanilad Cebu City Branch</></h6>
               <button type="button" class="btn btn-large btn-warning mb-4" data-toggle="modal" data-target="#exampleModal">Pay Now </button>
             
           </div>
         </div>
       </div><!--col4-->
 
-      <div class="col-sm-4 mb-5">
+      
+
+      <div class="col-sm-3 mb-5">
         <div class="card card text-center h-100">
           <div class="card-body">
             <img class="card-img-top fluid mb-4 mt-4" src="images/ecpay711.png"  style="width100%">
            
-            <h6 class="mt-3"style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold ">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
-            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 246-3-24655593-2</></h6>
-            <h6 style="font-size: calc(9px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Branch</></h6>
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold ">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 246-3-24655593-2</></h6>
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Cebu City Branch</></h6>
+            <button type="button" class="btn btn-large btn-warning mb-4" data-toggle="modal" data-target="#exampleModal">Pay Now </button>
+            
+          </div>
+        </div>
+      </div><!--col4-->
+
+      
+      <div class="col-sm-3 mb-5">
+        <div class="card card text-center h-100">
+          <div class="card-body">
+            <img class="card-img-top fluid mb-4 mt-1" src="images/landbank.png"  style="width100%">
+           
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold ">Account Name:</span><br/> Visayan Nazarene Bible College</h6>
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 2401-0214-45</></h6>
+            <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Landbank Banilad Cebu City Branch</></h6>
             <button type="button" class="btn btn-large btn-warning mb-4" data-toggle="modal" data-target="#exampleModal">Pay Now </button>
             
           </div>
