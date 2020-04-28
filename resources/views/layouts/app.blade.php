@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -25,11 +25,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"></script>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 </head>
 <body>
     <div id="app" class="">
-        <nav class="navbar navbar-expand-md nav-bg  sticky-top  justify-content-end menu" style="padding:0;">
+        <nav class="navbar navbar-expand-md nav-bg  sticky-top  justify-content-end menu" >
             <div class="container">
                 <a class="navbar-brand bg-black" style="padding:1rem;" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}

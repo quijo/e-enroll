@@ -15,17 +15,17 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('stud_fname');
-            $table->string('stud_lname');
-            $table->string('stud_gender');
-            $table->string('stud_grade');
-            $table->date('stud_birth');
-            $table->string('stud_bplace');
-            $table->string('stud_address');
-            $table->string('par_name');
-            $table->string('par_contact');
-            $table->string('par_address');
-            $table->string('par_email');
+            $table->string('stud_fname_field');
+            $table->string('stud_lname_field');
+            $table->string('stud_gender_field');
+            $table->string('stud_grade_field');
+            $table->date('stud_birth_field');
+            $table->string('stud_bplace_field');
+            $table->string('stud_address_field');
+            $table->string('par_name_field');
+            $table->string('par_contact_field');
+            $table->string('par_address_field');
+            $table->string('par_email_field');
             $table->timestamps();
         });
     }

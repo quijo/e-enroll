@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+       
     }
 
     /**
@@ -35,7 +35,25 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $students = array(
+            //for database                //from form submited
+            'stud_fname_field'=>$request->stud_fname,
+            'stud_lname_field'=>$request->stud_fname,
+            'stud_gender_field'=>$request->stud_gender,
+            'stud_grade_field'=>$request->stud_grade,
+            'stud_birth_field'=>$request->stud_birth,
+            'stud_bplace_field'=>$request->stud_bplace,
+            'stud_address_field'=>$request->stud_address,
+            'par_name_field'=>$request->par_name,
+            'par_contact_field'=>$request->par_contact,
+            'par_address_field'=>$request->par_address,
+            'par_email_field'=>$request->par_email,
+        );
+        Student::create($students);
+
+        //redirect to  payment mode
+        return redirect('payment');
+
     }
 
     /**

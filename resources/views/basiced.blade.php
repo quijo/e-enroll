@@ -9,7 +9,7 @@
                 <h1>BASIC EDUCATION</h1>
             </div>
 
-        <form method="POST"  action="{{}}">
+        <form method="POST"  action="{{route('students.store')}}">
             @csrf
             <div class="basiced-regform">
 
@@ -20,11 +20,11 @@
                                 <div class="form-group col-md-6">
                                     <label for="inputfirstname_middlename">Firstname and Middlename
                                     </label>
-                                    <input name="fnam_mname" type="text" class="form-control border-0" id="inputtext">
+                                    <input name="stud_fname"  id="stud-fname" type="text" class="form-control border-0">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputlastname">Lastname</label>
-                                    <input name="lname" input type="text" class="form-control  border-0 " id="inputlastname" >
+                                    <input name="stud_lname" id="stud_lname" input type="text" class="form-control  border-0 "  >
                                 </div>
                             </div>
 
@@ -32,14 +32,14 @@
                                 <div class="form-group col-md-6">
                                     <label for="inputgender">Gender
                                     </label>
-                                    <select input name="gender" type="text" class="form-control  border-0" id="inputtext">
+                                    <select input name="stud_gender" id="stud_gender" type="text" class="form-control  border-0" >
                                         <option>Male</option>
                                         <option>Female</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputgradelevel">Grade Level</label>
-                                    <select input name="gradelevel" type="text" class="form-control  border-0" id="inputgradelevel" >
+                                    <select input name="stud_grade" id="stud_grade" type="text" class="form-control  border-0"  >
                                         <option>Nursery-AM</option>
                                         <option>Nursery-PM</option>
                                         <option>Kinder-AM</option>
@@ -65,17 +65,17 @@
                                 <div class="form-group col-md-6">
                                     <label for="inputbirthday">Birthday
                                     </label>
-                                    <input name="bday" type="date" class="form-control  border-0" id="inputdate">
+                                    <input name="stud_birth" id="stud_birth" type="date" class="form-control  border-0" >
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputBirthplace">Birthplace</label>
-                                    <input name="bplace" type="text" class="form-control  border-0" id="inputBirthplace" placeholder="e.g. Apas, Cebu City">
+                                    <input name="stud_bplace" id="stud_bplace" type="text" class="form-control  border-0"  placeholder="e.g. Apas, Cebu City">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="inputAddress">Address</label>
-                                <input name="address" type="text" class="form-control  border-0" id="inputAddress" placeholder="1234 Main St">
+                                <input name="stud_address"id="stud_address" type="text" class="form-control  border-0"  placeholder="1234 Main St">
                             </div>
 
 
@@ -87,20 +87,20 @@
 
                             <div class="form-group">
                                 <label for="inputfirstname_middlename_lastname">Name</label>
-                                <input name="name" type="text" class="form-control  border-0" id="inputname">
+                                <input name="par_name" id="par_name" type="text" class="form-control  border-0" >
                             </div>
                             <div class="form-group">
                                 <label for="inputtelnumber">TelephoneNumber / CellphoneNumber</label>
-                                <input name="telnumber" type="text" class="form-control  border-0" id="inputtelnumber">
+                                <input name="par_contact" id="par_contact" type="text" class="form-control  border-0" >
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress">Address</label>
-                                <input type="text" class="form-control  border-0" id="inputAddress" placeholder="1234 Main St">
+                                <input name="par_address" id="par_address" type="text" class="form-control  border-0"  placeholder="1234 Main St">
                             </div>
 
                             <div class="form-group">
                                 <label for="inputemail">Email</label>
-                                <input name="email" type="text" class="form-control  border-0" id="inputemail">
+                                <input name="par_email" id="par_email" type="text" class="form-control  border-0" >
                             </div>
 
                               <button type="submit" class="btn btn-dark  border-0" style="background-color:black;">Submit</button>

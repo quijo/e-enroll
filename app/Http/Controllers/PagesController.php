@@ -18,6 +18,9 @@ class PagesController extends Controller
     public function contact(){
         return view('contact');
     }
+    public function payment(){
+        return view('payment');
+    }
     public function reserved_list(){
         return view('reserved_list');
     }

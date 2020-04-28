@@ -28,14 +28,14 @@
                             <div class="form-group col-md-6">
                                 <label for="inputgender">Gender
                                 </label>
-                                <select input name="gender" type="text" class="form-control" id="inputtext">
+                                <select  name="gender" type="text" class="form-control" id="inputtext">
                                     <option>Male</option>
                                     <option>Female</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputcourse">Course</label>
-                                <select name="course" input type="text" class="form-control" id="inputcourse" > 
+                                <select name="course"  type="text" class="form-control" id="inputcourse" > 
                                     <option>Bachelor of Arts in Theology</option>
                                     <option>Bachelor of Arts in Religious Education</option> 
                                 </select> 
