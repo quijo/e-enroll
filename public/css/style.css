@@ -355,6 +355,34 @@ color:#0AA1D9 ;
    width: 102%;
    
 }
+.facebook a{
+    color:black;
+    text-decoration: none;
+ 
+    
+}
+.facebook a:hover{
+    color:rgb(194, 194, 194);
+    transition:ease-in 0.2s;
+}
+.email a{
+    color:black;
+    text-decoration: none;
+}
+.email a:hover{
+    color:rgb(194, 194, 194);
+    transition:ease-in 0.2s;
+}
+.world a{
+    color:black;
+    text-decoration: none;
+}
+.world a:hover{
+    color:rgb(194, 194, 194);
+    transition:ease-in 0.2s;
+}
+
+
 
 
 

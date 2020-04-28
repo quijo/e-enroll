@@ -76,13 +76,13 @@
         </div>
        <div class="col-sm-6">
             <div class="facebook">
-                <i class="fab fa-facebook"></i><p>www.facebook.com/OFFICIALvnbcpage</p>
+                <a href="https://www.facebook.com/VNBCBED/"> <i class="fab fa-facebook "></i> <span class="ml-2">Facebook Account</span></p></a>
             </div>
-            <div class="messenger">
-                <i class="fab fa-facebook-messenger"></i><p>Leejarde Jardeliza Mahanlud</p>
+            <div class="email">
+                <a href="mailto:principal@vnbc.edu.ph"><i class="fas fa-envelope "></i> <span class="ml-2">Contact Principal</span></a>
             </div>
             <div class="world">
-            <i class="fas fa-globe"></i><p>vnbc.edu.ph</p>
+                <a href="https://www.vnbc.edu.ph"  style="margin-left:-3;"><i class="fas fa-globe"></i><span class="ml-2">vnbc.edu.ph</a>
             </div>
        </div>
         
