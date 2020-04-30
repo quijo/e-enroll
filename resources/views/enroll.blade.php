@@ -6,7 +6,7 @@
         <div class="banner-logo">
                 <img src="../images/vnbc-logo.png"><h3>Visayan Nazarene Bible College</h3>
         </div>
-
+       
         <div class="banner-box">
                 <div class="bluebox"><h1>PRE-ENROLLMENT</h1></div>
                 <div class="prereg-form">

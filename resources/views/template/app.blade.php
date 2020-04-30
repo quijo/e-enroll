@@ -44,6 +44,9 @@
                             <li class="nav-item {{ Request::is('college*') ? 'active-link' : '' }}">
                                 <a class="nav-link" href="{{url('college')}}">COLLEGE</a>
                             </li>
+                            <li class="nav-item {{ Request::is('payment*') ? 'active-link' : '' }}">
+                                <a class="nav-link" href="{{url('payment')}}">PAYMENT</a>
+                            </li>
                             <li class="nav-item {{ Request::is('contact*') ? 'active-link' : '' }}">
                                 <a class="nav-link" href="{{url('contact')}}">CONTACT</a>
                             </li>
@@ -93,7 +96,11 @@
    
 
 
-
+<script>
+    $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
 
 <script>
 $(document).ready(function(){

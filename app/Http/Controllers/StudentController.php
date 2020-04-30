@@ -35,7 +35,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $students = array(
+        $paymnents = array(
             //for database                //from form submited
             'stud_fname_field'=>$request->stud_fname,
             'stud_lname_field'=>$request->stud_lname,
@@ -49,10 +49,10 @@ class StudentController extends Controller
             'par_address_field'=>$request->par_address,
             'par_email_field'=>$request->par_email,
         );
-        Student::create($students);
+        Student::create($payments);
         
-        //redirect to  payment mode
-        return redirect('payment');
+        //success page
+       // return ;
 
     }
 
