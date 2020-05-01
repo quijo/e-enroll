@@ -26,6 +26,7 @@ class CreateColStudentsTable extends Migration
             $table->string('col_par_contact_field');
             $table->string('col_par_address_field');
             $table->string('col_par_email_field');
+            $table->string('status');
             $table->timestamps();
         });
     }

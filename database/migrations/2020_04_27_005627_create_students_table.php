@@ -26,6 +26,7 @@ class CreateStudentsTable extends Migration
             $table->string('par_contact_field');
             $table->string('par_address_field');
             $table->string('par_email_field');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

@@ -15,7 +15,10 @@ class PaymentController extends Controller
     public function index()
     {
                     // payment page 
-        return view ('payment');
+        // $reserved = Payment::all();
+        // return dd($reserved);
+        // return view('payments')->with('reserveds', $reserved);
+        // return view ('payment');
     }
 
     /**
@@ -54,14 +57,11 @@ class PaymentController extends Controller
             'payment_receipt_upload_field'=>$filename,
         );
 
-       
-
-
-
             }
-
-          
             Payment::create($data);
+
+            // return redirect('thankyou')->with('data', $data);
+           
 
     }
 

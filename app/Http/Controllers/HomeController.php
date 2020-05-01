@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Payment;
+use App\Student;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,15 @@ class HomeController extends Controller
      */
     public function index()
     {
+        
         return view('home');
+    }
+
+    public function reserved_list()
+    {
+        $reserved = Student::all();
+        return view('reserved_list')->with('reserveds', $reserved);
+
+
     }
 }

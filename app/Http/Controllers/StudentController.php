@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-       
+     
     }
 
     /**
@@ -24,7 +24,14 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+   
+    }
+
+    public function post_mail()
+    {
+
+       
+
     }
 
     /**
@@ -35,7 +42,7 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $paymnents = array(
+        $payments = array(
             //for database                //from form submited
             'stud_fname_field'=>$request->stud_fname,
             'stud_lname_field'=>$request->stud_lname,
@@ -48,8 +55,12 @@ class StudentController extends Controller
             'par_contact_field'=>$request->par_contact,
             'par_address_field'=>$request->par_address,
             'par_email_field'=>$request->par_email,
+           
+            
         );
+
         Student::create($payments);
+        return view('thankyou');
         
         //success page
        // return ;

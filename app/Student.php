@@ -19,4 +19,6 @@ class Student extends Model
         'par_address_field',
         'par_email_field',
     ];
+
+    public $timestamp = true;
 }
