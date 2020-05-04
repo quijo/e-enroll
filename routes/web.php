@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
             //url when type name
+
+
+
+Route::get('/dashboard', 'PagesController@chartUpdate');
 Route::get('/','PagesController@index');
 Route::get('/basiced','PagesController@basiced');
 Route::get('/college','PagesController@college');
@@ -13,15 +17,10 @@ Route::get('/college','PagesController@college');
 Route::get('/contact','PagesController@create'); //get url  hitting the PagesController crete() method on clicking links
 
 ////submitting a form to email  posting a form
-Route::post('/contact','PagesController@store'); //post to PagesController hittingt a store() method action="/contact"
+Route::post('/contact','PagesController@store'); //post to PagesController hittingt a store() method action="/contact"Rou
 
 Route::get('/payment','PagesController@payment');
 Route::get('/thankyou','PagesController@thankyou');
-
-
-
-
-
 
                 //keywords
 Route::resource('students','StudentController');
@@ -30,10 +29,30 @@ Route::resource('col_students','ColStudentController');
 //action="{{route('payments.store')}} if using resource
 Route::resource('payments','PaymentController');
 
+Route::get('/paid', 'PaymentController@index');
 
-Auth::routes();
+// Route::get('editStatus', function(){
+//     return view('editStatus');
+// });
+
+
+Route::resource('/students','StudentController');
+
+
+Auth::routes(['register'=>true]);
+
+
 Route::get('/reserved_list','HomeController@reserved_list');
+
+Route::get('/home', 'HomeController@reserved_count');
+
+Route::get('/home', 'HomeController@grade_levels');
+
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
 
 
 

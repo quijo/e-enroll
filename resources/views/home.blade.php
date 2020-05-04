@@ -13,8 +13,14 @@
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
-            <h3>150</h3>
-            <p>Reserved</p>
+          {{-- @foreach($students_count as $count)
+
+          @endforeach --}}
+        
+            <h3>{{$counts}}</h3>
+          
+            
+            <p>Total ReReserved</p>
           </div>
           <div class="icon">
             <i class="fas fa-save"></i>
@@ -27,7 +33,7 @@
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
-            <h3>53</h3>
+            <h3>{{$counts}}</h3>
 
             <p>Basic Education</p>
           </div>
@@ -42,7 +48,7 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>44</h3>
+            <h3>0</h3>
 
             <p>College</p>
           </div>
@@ -92,6 +98,65 @@
 
 
 
-
 @endsection
 
+@section('barChart')
+  
+<script>
+  //by chartjs.org
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['Preschool','Grade1', 'Grade2', 'Grade3', 'Grade4', 'Grade5','Grade6','Grade7','Grade8','Grade9','Grade10','Grade11','Grade12',],
+          datasets: [{
+              label: 'Reservation',
+              data: [{{$preschool}},{{$grade1}},{{$grade2}},{{$grade3}},{{$grade4}}, {{$grade5}},{{$grade6}},{{$grade7}},{{$grade8}},{{$grade9}},{{$grade10}},{{$grade11}},{{$grade12}}],
+              backgroundColor: [
+                  'rgba(255, 99, 132,1 )',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255,1)',
+                  'rgba(255, 159, 64, 1)',
+                  'rgba(255, 99, 132,1 )',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255,1)',
+                  'rgba(255, 159, 64, 1)',
+                  'rgba(255, 99, 132,1 )',
+                  'rgba(54, 162, 235, 1)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)',
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)',
+                  'rgba(255, 99, 132,1 )',
+                  'rgba(54, 162, 235, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+
+              }]
+          }
+      }
+  });
+  </script>
+@endsection

@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 use App\Mail\ContactFormMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Student;
 
 class PagesController extends Controller
 {
     public function index(){
         return view('enroll');
     }
+
     public function basiced(){
         return view('basiced');
     }

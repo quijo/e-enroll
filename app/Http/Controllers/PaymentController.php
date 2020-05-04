@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Payment;
 use Illuminate\Http\Request;
 
@@ -14,11 +14,10 @@ class PaymentController extends Controller
      */
     public function index()
     {
-                    // payment page 
-        // $reserved = Payment::all();
-        // return dd($reserved);
-        // return view('payments')->with('reserveds', $reserved);
-        // return view ('payment');
+        $payment_created = Payment::all();
+        return view('paid')->with('pay', $payment_created);
+      
+       
     }
 
     /**
@@ -30,7 +29,7 @@ class PaymentController extends Controller
     {
         //
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -41,26 +40,27 @@ class PaymentController extends Controller
     {
 
 
-        if($request->has('payment_receipt_upload')){
-            $fileuploaded = $request->file('payment_receipt_upload');
-            // $filename= $request->  $fileuploaded->getClientOriginalExtension(); 
-           // $filename= time() . '.' . $fileuploaded->getClientOriginalExtension(); // getting image extension
-            $filename = $request->file('payment_receipt_upload')->getClientOriginalName();
-            $filepath= public_path('/images/');
-            $fileuploaded->move( $filepath, $filename); //ok
+        if($request->has('Upload'))
+        {
+                $fileuploaded = $request->file('Upload');
+                $filename = $request->file('Upload')->getClientOriginalName();
+                $filepath= public_path('/images/');
+                $fileuploaded->move( $filepath, $filename); 
+                
+        }
+        
+                $payment_data = array(  
+                    'Name'=>$request->Name,
+                    'Amount'=>$request->Amount,
+                    'Upload'=>$filename,
+                );
 
-           
-        $data = array(  
+    
+        // dd($payment_data);
+            // dd($payment_data);
+            Payment::create($payment_data);
+            // return back('thankyou')->with('data', $data);
             
-            'payment_name_field'=>$request->payment_stud_name,
-            'payment_amount_field'=>$request->payment_amount,
-            'payment_receipt_upload_field'=>$filename,
-        );
-
-            }
-            Payment::create($data);
-
-            // return redirect('thankyou')->with('data', $data);
            
 
     }
@@ -75,9 +75,11 @@ class PaymentController extends Controller
      * @param  \App\Payment  $payment
      * @return \Illuminate\Http\Response
      */
-    public function show(Payment $payment)
+    public function show(Payment $id)
     {
-        //
+      
+       
+  
     }
 
     /**
@@ -88,7 +90,7 @@ class PaymentController extends Controller
      */
     public function edit(Payment $payment)
     {
-        //
+       
     }
 
     /**
@@ -100,7 +102,7 @@ class PaymentController extends Controller
      */
     public function update(Request $request, Payment $payment)
     {
-        //
+       
     }
 
     /**

@@ -15,9 +15,9 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->string('payment_name_field');
-            $table->decimal('payment_amount_field', 8, 2);
-            $table->string('payment_receipt_upload_field')->default('/images/default-avatar.jpg');
+            $table->string('Name');
+            $table->decimal('Amount');
+            $table->string('Upload');
             $table->timestamps();
         });
     }

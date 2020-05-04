@@ -3,266 +3,252 @@
 
 
 @section('content')
-        <!-- Main content -->
-        <section class="content">
 
-            {{-- <!-- Default box -->
-            <div class="card mt-2">
-              <div class="card-header">
-                <h3 class="card-title">Reserved List</h3>
-      
-                <div class="card-tools">
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
-                    <i class="fas fa-minus"></i></button>
-                  <button type="button" class="btn btn-tool" data-card-widget="remove" data-toggle="tooltip" title="Remove">
-                    <i class="fas fa-times"></i></button>
-                </div>
-              </div>
-              <div class="card-body p-0">
-                --}}
+    @if($message = Session::get('success'))
+    <div class="alert alert-success">{{$message}}</div>
+    @endif
 
-
-{{-- ############################ tab ############################### --}}
-<div class="card mt-2 ">
-    <div class="card-header">
-        Resereved Info
-    </div>
-
-   
-<ul class="nav nav-tabs mt-2" id="myTab" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" id="student-tab" data-toggle="tab" href="#student" role="tab" aria-controls="student" aria-selected="true">Student</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="parent-tab" data-toggle="tab" href="#parent" role="tab" aria-controls="parent" aria-selected="false">Parent</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" id="pending-tab" data-toggle="tab" href="#pending" role="tab" aria-controls="pending" aria-selected="false">Pending</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" id="approved-tab" data-toggle="tab" href="#approved" role="tab" aria-controls="approved" aria-selected="false">Approved</a>
-      </li>
-  </ul>
-  <div class="tab-content " id="myTabContent">
-
-    <div class="tab-pane fade show active " id="student" role="tabpanel" aria-labelledby="student-tab">
-        <!--student tab content-->
-        <table class="table table-striped  ">
-            <thead>
-                <tr>
-                    <th style="width: 10%">
-                        Date 
-                    </th>
-                    <th style="width: 20%">
-                        firstname
-                    </th>
-                    <th style="width: 20%">
-                        lastname
-                    </th>
-                    <th style="with:10%">
-                        Gender
-                    </th>
-                    <th style="width: 10%">
-                        Grade
-                    </th>
-                    <th style="width: 10%">
-                        Contact
-                    </th>
-                    <th style="width:10%">
-                      Email 
-                    </th>
-                    <th>Status</th>
-                    <th style="width: 10%">
-                        Action
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-            @foreach($reserveds as $reserved)
-                <tr>
-                    <td>{{$reserved->created_at->format('d/m/Y')}}</td>
-                    <td>{{$reserved->stud_fname_field}}</td>
-                    <td>{{$reserved->stud_lname_field}}</td>
-                    <td>{{$reserved->stud_gender_field}}</td>
-                    <td>{{$reserved->stud_grade_field}}</td>
-                    <td>{{$reserved->par_contact_field}}</td>
-                    <td>{{$reserved->par_email_field}}</td>
-                    <td>{{$reserved->status}}</td>
-                    <td >
-                        <a  href="#">
-                            <i class="fas fa-trash text-danger">
-                            </i>
-                        </a>
-                         <a  href="#">
-                            <i class="fas fa-edit text-success">
-                            </i>
-                        </a>
-                    </td>
-                   
-                </tr>
-            @endforeach
-             
-            </tbody>
-        </table>
-        <!--end student tab content-->
-    </div> <!--end student tab pane-->
-
-    <!--parent tab pane-->
-    <div class="tab-pane fade" id="parent" role="tabpanel" aria-labelledby="parent-tab">
-   
-            <table class="table table-striped  ">
-                <thead>
-                    <tr>
-                        <th style="width: 10%">
-                            Date 
-                        </th>
-                        <th style="width: 20%">
-                            Fullname
-                        </th>
-                        <th style="width: 20%">
-                            Contact
-                        </th>
-                        <th style="with:10%">
-                            Address
-                        </th>
-                        <th style="width: 10%">
-                            Email
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                @foreach($reserveds as $reserved)
-                    <tr>
-                        <td>{{$reserved->created_at->format('d/m/Y')}}</td>
-                        <td>{{$reserved->par_name_field}}</td>
-                        <td>{{$reserved->par_contact_field}}</td>
-                        <td>{{$reserved->par_address_field}}</td>
-                        <td>{{$reserved->stud_email_field}}</td>
-                       
-                        <td >
-                            <a  href="#">
-                                <i class="fas fa-trash text-danger">
-                                </i>
-                            </a>
-                             <a  href="#">
-                                <i class="fas fa-edit text-success">
-                                </i>
-                            </a>
-                        </td>
-                       
-                    </tr>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul class="p-2">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
                 @endforeach
-                 
-                </tbody>
-            </table>
-   
-    </div>
-    <!--end parent tab pane-->
-
-    <!-- Penting status-->
-    <div class="tab-pane fade" id="pending" role="tabpanel" aria-labelledby="pending-tab">
-        
-        
-        <table class="table table-striped  ">
-            <thead>
-                <tr>
-                    <th style="width: 10%">
-                        Date 
-                    </th>
-                    <th style="width: 20%">
-                        firstname
-                    </th>
-                    <th style="width: 20%">
-                        lastname
-                    </th>
-                    <th style="with:10%">
-                        Gender
-                    </th>
-                    <th style="width: 10%">
-                        Grade
-                    </th>
-                    <th style="width: 10%">
-                        Contact
-                    </th>
-                    <th style="width:10%">
-                      Email 
-                    </th>
-                    <th>Status</th>
-                    <th style="width: 10%">
-                        Action
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-
-          
-         
-            @foreach($reserveds as $reserved)
-          
-    
-        
-                <tr>
-                    <td>{{$reserved->created_at->format('d/m/Y')}}</td>
-                    <td>{{$reserved->stud_fname_field}}</td>
-                    <td>{{$reserved->stud_lname_field}}</td>
-                    <td>{{$reserved->stud_gender_field}}</td>
-                    <td>{{$reserved->stud_grade_field}}</td>
-                    <td>{{$reserved->par_contact_field}}</td>
-                    <td>{{$reserved->par_email_field}}</td>
-                    <td> {{$reserved->status}} </td>
-                   
-                    <td >
-                        <a  href="#">
-                            <i class="fas fa-trash text-danger">
-                            </i>
-                        </a>
-                         <a  href="#">
-                            <i class="fas fa-edit text-success">
-                            </i>
-                        </a>
-                    </td>
-                   
-                </tr>
-              
-            @endforeach
-          
-            </tbody>
-        </table>
-
-    </div>
-    <div class="tab-pane fade" id="approved" role="tabpanel" aria-labelledby="approved-tab">All Approved Status</div>
-  </div>
-
-</div> <!--card-->
-{{-- ############################ tab ################################ --}}
+            </ul>
+        </div>
+     @endif
 
 
+    {{-- ####################################################################################################################### --}}
+    {{-- #######################################THIS PAGE CONTAIN RESERVEATION LIST############################################# --}}
+    {{-- ####################################################################################################################### --}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              {{-- </div>
-              <!-- /.card-body -->
+    {{-- ############################ Star tab ############################### --}}
+        <div class="card m-2 " style="overflow: hidden">
+            <div class="card-header">
+                Resereved Info
             </div>
-            <!-- /.card --> --}}
-      
-          </section>
+
+
+            {{-- TAB LINKS STUDENTS AND PARENTS --}}
+            <ul class="nav nav-tabs m-2" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="student-tab" data-toggle="tab" href="#student" role="tab" aria-controls="student" aria-selected="true">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="parent-tab" data-toggle="tab" href="#parent" role="tab" aria-controls="parent" aria-selected="false">Parents</a>
+                </li>
+            </ul>
+
+            <div class="tab-content  " id="myTabContent" >
+                <div class="tab-pane fade show active m-2" id="student" role="tabpanel" aria-labelledby="student-tab">
+                    <!--student tab content-->
+                   
+                    <table class="table table-striped " id="datatable">
+
+                        <thead>
+                            <tr>
+                                <th style="width: 5%">Id</th>
+                                <th style="width: 5%"> Posted </th>
+                                <th style="width: 25%">Firstname </th>
+                                <th style="width: 25%"> Lastname</th>
+                                <th style="width: 5%"> Gender </th>
+                                <th style="width: 10%"> Grade</th>
+                                <th style="width: 5%"> Contact</th>
+                                <th style="width: 10%"> Email </th>
+                                <th style="width: 5%">Status</th>
+                                <th style="width: 5%">Change</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach($reserveds as $reserved)
+                                <tr>
+                                    <td>{{$reserved->id}}</td>
+                                    <td>{{$reserved->created_at->format('d.M.y')}}</td>
+                                    <td>{{$reserved->First_Name}}</td>
+                                    <td>{{$reserved->Last_Name}}</td>
+                                    <td>{{$reserved->Gender}}</td>
+                                    <td>{{$reserved->Grade_Level}}</td>
+                                    <td>{{$reserved->Parents_Contact}}</td>
+                                    <td><a href="mailto:{{$reserved->Parents_Email}}">{{$reserved->Parents_Email}}</td>
+
+                                    @if ($reserved->status == 'pending')
+                                        <td style="color:red">{{$reserved->status}}</td>
+                                    @elseif($reserved->status == 'Canceled')
+                                        <td style="color:red">{{$reserved->status}}</td>
+                                    @else
+                                    <td style="color:green">{{$reserved->status}}</td>
+                                    @endif
+                                    
+
+                                    <td> 
+                                      {{-- <i class="fas fa-edit text-success" > </i>--}}
+                                          <a href="#"  class="btn btn-warning edit btn-sm" > Status  </a>
+                                     
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+
+                    </table>
+           
+                    <!--end student tab content-->
+                </div> <!--end student tab pane-->
+
+                <!--parent tab pane-->
+                <div class="tab-pane fade" id="parent" role="tabpanel" aria-labelledby="parent-tab">
+
+                        <table class="table table-striped  ">
+                            <thead>
+                                <tr> 
+                                    <th> Date </th>
+                                    <th> Fullname </th>
+                                    <th> Contact </th>
+                                    <th> Address </th>
+                                    <th> Email </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach($reserveds as $reserved)
+                                    <tr>
+                                        <td>{{$reserved->created_at->format('d/m/Y')}}</td>
+                                        <td>{{$reserved->Parents_Name}}</td>
+                                        <td>{{$reserved->Parents_Contact}}</td>
+                                        <td>{{$reserved->Parents_Address}}</td>
+                                        <td>{{$reserved->Parents_Email}}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                </div>
+                <!--end parent tab pane-->
+            </div><!--tab content-->
+        </div> <!--card main wrap-->
+    {{-- ############################ End of Tab ############################### --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     {{-- ############################ Start Reserved Appproved Modal ############################### --}}
+        <div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                
+                
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change Status</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                </div><!--/modal-header-->
+
+                {{-- Start Modal Body --}}
+                <div class="modal-body">
+
+
+
+
+                    <form action="/students" method="POST" id="edit_status_form" >
+                      @csrf
+                      @method('PUT')
+
+
+
+                      {{-- <div class="form-group">
+                        <label >Id</label>
+                        <input type="text" class="form-control" name="id" id="id" placeholder="Enter Id" >
+                      </div> --}}
+
+                        {{-- <div class="form-group">
+                            <label>Date</label>
+                            <input type="text" class="form-control" name="created_at" id="created_at" placeholder="created_at">
+                        </div> --}}
+
+                        {{-- <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text"  class="form-control" name="First_Name" id="First_Name" placeholder="First Name">
+                        </div> --}}
+
+                        {{-- <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" name="Last_Name" id="Last_Name" placeholder="Last Name">
+                        </div> --}}
+
+                        {{-- <div class="form-group">
+                            <label >Gender</label>
+                            <input type="text"  class="form-control" name="Gender" id="Gender" placeholder="Gender">
+                        </div> --}}
+
+                        {{-- <div class="form-group">
+                            <label >Grade</label>
+                            <input type="text"  class="form-control" name="Grade_Level" id="Grade_Level" placeholder="Grade Levelr">
+                        </div> --}}
+
+
+                        {{-- <div class="form-group">
+                            <label >Contact</label>
+                            <input type="text"  class="form-control" name="Parents_Contact" id="Parents_Contact" placeholder="Parents Contact">
+                        </div> --}}
+
+                        {{-- <div class="form-group">
+                            <label>Email</label>
+                            <input type="text"  class="form-control" name="Parents_Email" id="Parents_Email" placeholder="Parents Email">
+                        </div> --}}
+
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="Status" value="pending"  id="Status" >
+                            <label class="form-check-label" for="Status" >
+                              Pending
+                            </label> 
+                        </div>
+
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" name="Status"  value="approved" id="Status"  >
+                            <label class="form-check-label" for="Status">
+                              Approved
+                            </label>
+                          </div>
+
+                          <div class="form-check">
+                            <input type="radio" class="form-check-input" name="Status"  value="Canceled" id="Status"  >
+                            <label class="form-check-label" for="Status">
+                              Cancel
+                            </label>
+                        </div>
+
+                        <div class="modal-footer float-left">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" >Update</button>
+                        </div>
+                       
+                    </form>
+                  
+
+                  </div><!--/modal body-->
+                {{-- End Modal Body --}}
+
+
+                </div><!--modal content-->
+            </div><!--modal dialog-->
+        </div> <!--end main modal-->
+     {{-- ############################ End Reserved Appproved Modal ############################### --}}
+
+
+
+
 @endsection
+

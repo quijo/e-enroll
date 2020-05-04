@@ -9,37 +9,55 @@
                 <h1>BASIC EDUCATION</h1>
             </div>
 
+            <div class="m-1">
+                @if($message = Session::get('success'))
+                <div class="alert alert-success">{{$message}}</div>
+                @endif
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul class="p-2">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                 @endif
+            </div>
+           
         <form method="POST"  action="{{route('students.store')}}">
+           
             @csrf
             <div class="basiced-regform">
 
                     <div class="students-form">
                         <h3>Student Info</h3>
-
                             <div class="form-row">
                                 <div class="form-group col-md-6">
-                                    <label for="inputfirstname_middlename">Firstname and Middlename
-                                    </label>
-                                    <input name="stud_fname"  id="stud-fname" type="text" class="form-control border-0">
+                                    <label for="inputfirstname_middlename">Firstname and Middlename</label>
+                                    <input name="First_Name" value="{{old('First_Name')}}"placeholder="Enter First and Middlename" id="stud-fname" type="text" class="form-control border-0">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputlastname">Lastname</label>
-                                    <input name="stud_lname" id="stud_lname" input type="text" class="form-control  border-0 "  >
+                                    <input name="Last_Name" value="{{old('Last_Name')}}" placeholder="Enter Lastn" id="stud_lname" input type="text" class="form-control  border-0 "  >
                                 </div>
                             </div>
+          
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputgender">Gender
                                     </label>
-                                    <select input name="stud_gender" id="stud_gender" type="text" class="form-control  border-0" >
+                                    <select input name="Gender"  id="stud_gender" type="text" class="form-control  border-0"  >
+                                        <option value="" disabled selected hidden>Enter Gender</option>
                                         <option>Male</option>
                                         <option>Female</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputgradelevel">Grade Level</label>
-                                    <select input name="stud_grade" id="stud_grade" type="text" class="form-control  border-0"  >
+                                    <select input name="Grade_Level" id="stud_grade" type="text" class="form-control  border-0"  >
+                                        <option value="" disabled selected hidden>Enter Grade Level</option>
                                         <option>Nursery-AM</option>
                                         <option>Nursery-PM</option>
                                         <option>Kinder-AM</option>
@@ -65,17 +83,17 @@
                                 <div class="form-group col-md-6">
                                     <label for="inputbirthday">Birthday
                                     </label>
-                                    <input name="stud_birth" id="stud_birth" type="date" class="form-control  border-0" >
+                                    <input name="Birthday" value="{{old('Birthday')}}" id="stud_birth" type="date" class="form-control  border-0" >
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputBirthplace">Birthplace</label>
-                                    <input name="stud_bplace" id="stud_bplace" type="text" class="form-control  border-0"  placeholder="e.g. Apas, Cebu City">
+                                    <input name="Birth_Place" value="{{old('Birth_Place')}}" placeholder="Enter Birth Place" id="stud_bplace" type="text" class="form-control  border-0"  placeholder="e.g. Apas, Cebu City">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label for="inputAddress">Address</label>
-                                <input name="stud_address"id="stud_address" type="text" class="form-control  border-0"  placeholder="1234 Main St">
+                                <input name="Student_Address" value="{{old('Student_Address')}}"id="stud_address" type="text" class="form-control  border-0"  placeholder="Enter Address">
                             </div>
 
 
@@ -87,20 +105,20 @@
 
                             <div class="form-group">
                                 <label for="inputfirstname_middlename_lastname">Name</label>
-                                <input name="par_name" id="par_name" type="text" class="form-control  border-0" >
+                                <input name="Parents_Name" value="{{old('Parents_Name')}}" id="par_name" value="{{old('name')}}" placeholder="Enter Parent's Name" type="text" class="form-control  border-0" >
                             </div>
                             <div class="form-group">
                                 <label for="inputtelnumber">TelephoneNumber / CellphoneNumber</label>
-                                <input name="par_contact" id="par_contact" type="text" class="form-control  border-0" >
+                                <input name="Parents_Contact" value="{{old('Parents_Contact')}}" id="par_contact" placeholder="Enter Parents Contact Number" type="text" class="form-control  border-0" >
                             </div>
                             <div class="form-group">
                                 <label for="inputAddress">Address</label>
-                                <input name="par_address" id="par_address" type="text" class="form-control  border-0"  placeholder="1234 Main St">
+                                <input name="Parents_Address" value="{{old('Parents_Address')}}" id="par_address" placeholder="Enter Parent's Address" type="text" class="form-control  border-0"  placeholder="1234 Main St">
                             </div>
 
                             <div class="form-group">
                                 <label for="inputemail">Email</label>
-                                <input name="par_email" id="par_email" type="text" class="form-control  border-0" >
+                                <input name="Parents_Email" id="Parents_Email" value="{{old('Parents_Email')}}" placeholder="Enter Parent's Email" type="text" class="form-control  border-0" >
                             </div>
 
                               <button type="submit" name="submit" class="btn btn-dark  border-0" style="background-color:black;">Submit</button>

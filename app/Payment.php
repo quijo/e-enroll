@@ -10,8 +10,8 @@ class Payment extends Model
     protected $table = "payments";
     protected $fillable=[
         //table field name
-        'payment_name_field',
-        'payment_amount_field',
-        'payment_receipt_upload_field'
+        'Name',
+        'Amount',
+        'Upload'
     ];
 }

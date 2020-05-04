@@ -20,11 +20,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/style.css">
+  
+
 
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini layout-fixed fixed" >
 <div class="wrapper">
 
   <!-- Navbar -->
@@ -35,7 +40,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu"ref="#"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -43,7 +48,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    {{-- <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
@@ -52,7 +57,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </button>
         </div>
       </div>
-    </form>
+    </form> --}}
 
     <!-- Right navbar links -->
 
@@ -60,16 +65,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar fixed sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       {{-- <img src="img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8"> --}}
       <span class="brand-text font-weight-light" style="margin-left:75px">{{ config('app.name', 'Laravel') }}</span>
     </a>
 
     <!-- Sidebar -->
-    <div class="sidebar">
+    <div class="sidebar ">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image" style="color:white;">
@@ -83,7 +88,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <ul class="nav nav-pills nav-sidebar flex-column layout-fixed" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open ">
@@ -101,12 +106,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       <p>Dashboard</p>
                     </a>
                   </li>
-              <li class="nav-item">
-                <a href="{{url('reserved_list')}}" class="nav-link">
-                  <i class="fas fa-list nav-icon"></i>
-                  <p>Reserved List</p>
-                </a>
-              </li>
+                  <li class="nav-item">
+                    <a href="{{url('reserved_list')}}" class="nav-link">
+                      <i class="fas fa-list nav-icon"></i>
+                      <p>Reserved List</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('paid')}}" class="nav-link">
+                      <i class="fas fa-money-bill-wave"></i>
+                      <p>Paid</p>
+                    </a>
+                  </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -135,6 +146,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <div class="content">
       @yield('content')
     </div>
+
+
+
+
   </div>
   <!-- /.content-wrapper -->
 {{--
@@ -152,24 +167,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <footer class="main-footer">
     <!-- To the right -->
     <div class="float-right d-none d-sm-inline">
-      Anything you want
+     
     </div>
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <p><strong> Copyright &copy; 2020 <a href="https://nvbc.edu.ph">  VNBC.  </a>  </strong>  All rights reserved.</p>
   </footer>
 </div>
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
+<script src="plugins/jquery/jquery.min.js"></script>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 
 
+  
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> --}}
 <!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
@@ -179,63 +198,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="js/demo.js"></script>
 
 
-<script>
-    //by chartjs.org
-    var ctx = document.getElementById('myChart').getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Preschool', 'Grade1', 'Grade2', 'Grade3', 'Grade4', 'Grade5','Grade6','Grade7','Grade8','Grade9','Grade10','Grade11','Grade12','College'],
-            datasets: [{
-                label: 'Reservation',
-                data: [5, 9, 3, 5, 2, 3,4,7,8,2,9,8,6,9],
-                backgroundColor: [
-                    'rgba(255, 99, 132,1 )',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255,1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(255, 99, 132,1 )',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255,1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(255, 99, 132,1 )',
-                    'rgba(54, 162, 235, 1)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(255, 99, 132,1 )',
-                    'rgba(54, 162, 235, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
 
-                }]
-            }
-        }
-    });
-    </script>
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+                    //the table id  .DataTable is a function
+      var table = $('#datatable').DataTable();
+      //start edit record .edit class of of updtate button
+      table.on('click', '.edit', function(){
+
+          $tr =$(this).closest('tr');
+          if ($($tr).hasClass('child')){
+              $tr = $tr.prev('.parent');
+
+          }
+
+          var data = table.row($tr).data();
+          console.log(data);
+
+     
+          // $('#created_at').val(data[1]);
+          // $('#First_Name').val(data[2]);
+          // $('#Last_Name').val(data[3]);
+          // $('#Gender').val(data[4]);
+          // $('#Grade_Level').val(data[5]);
+          // $('#Parents_Contact').val(data[6]);
+          // $('#Parents_Email').val(data[7]);
+          // $('#Status').val(data[8]);
+       
+
+          $('#edit_status_form').attr('action', '/students/' + data[0]);
+          $('#edit_modal').modal('show');
+      });
+  })
+     
+  </script>
+
+  
+  @yield('barChart')
+
+
+
+
 </body>
 </html>
 

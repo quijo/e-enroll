@@ -14,7 +14,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-     
+    
     }
 
     /**
@@ -42,25 +42,41 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
+
+           //validate inputs
+           $data = request()->validate([
+            'First_Name'=>'required',
+            'Last_Name'=>'required',
+            'Gender'=>'required',
+            'Grade_Level'=>'required',
+            'Birthday'=>'required',
+            'Birth_Place'=>'required',
+            'Student_Address'=>'required',
+            'Parents_Name'=>'required',
+            'Parents_Contact'=>'required',
+            'Parents_Address'=>'required',
+            'Parents_Email'=>'required|email',
+        ]);
+
         $payments = array(
-            //for database                //from form submited
-            'stud_fname_field'=>$request->stud_fname,
-            'stud_lname_field'=>$request->stud_lname,
-            'stud_gender_field'=>$request->stud_gender,
-            'stud_grade_field'=>$request->stud_grade,
-            'stud_birth_field'=>$request->stud_birth,
-            'stud_bplace_field'=>$request->stud_bplace,
-            'stud_address_field'=>$request->stud_address,
-            'par_name_field'=>$request->par_name,
-            'par_contact_field'=>$request->par_contact,
-            'par_address_field'=>$request->par_address,
-            'par_email_field'=>$request->par_email,
+           
+            'First_Name'=>$request->First_Name,
+            'Last_Name'=>$request->Last_Name,
+            'Gender'=>$request->Gender,
+            'Grade_Level'=>$request->Grade_Level,
+            'Birthday'=>$request->Birthday,
+            'Birth_Place'=>$request->Birth_Place,
+            'Student_Address'=>$request->Student_Address,
+            'Parents_Name'=>$request->Parents_Name,
+            'Parents_Contact'=>$request->Parents_Contact,
+            'Parents_Address'=>$request->Parents_Address,
+            'Parents_Email'=>$request->Parents_Email,
            
             
         );
 
         Student::create($payments);
-        return view('thankyou');
+        return back()->with('success', 'Thank you');
         
         //success page
        // return ;
@@ -75,7 +91,7 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-        //
+       
     }
 
     /**
@@ -84,9 +100,9 @@ class StudentController extends Controller
      * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit(Student $id)
     {
-        //
+      
     }
 
     /**
@@ -96,9 +112,66 @@ class StudentController extends Controller
      * @param  \App\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request, $id)
     {
-        //
+
+       
+     
+              //validate inputs
+        $this->validate($request,[
+            // 'First_Name'=>'required',
+            // 'Last_Name'=>'required',
+            // 'Gender'=>'required',
+            // 'Grade_Level'=>'required',
+            // 'Birthday'=>'required',
+            // 'Birth_Place'=>'required',
+            // 'Student_Address'=>'required',
+            // 'Parents_Name'=>'required',
+            // 'Parents_Contact'=>'required',
+            // // 'Parents_Address'=>'required',
+            // 'Parents_Email'=>'required|email',
+            'status'=>'Status',
+        ]);
+        // return back()->with('success', 'data has content');
+
+        // $data = request()->validate([
+            // 'First_Name'=>'required',
+            // 'Last_Name'=>'required',
+            // 'Gender'=>'required',
+            // 'Grade_Level'=>'required',
+        //     'Birthday'=>'required',
+        //     'Birth_Place'=>'required',
+        //     'Student_Address'=>'required',
+        //     'Parents_Name'=>'required',
+            // 'Parents_Contact'=>'required',
+        //     'Parents_Address'=>'required',
+            // 'Parents_Email'=>'required|email',
+            // 'Status'=>'required|email',
+        // ]);
+
+       
+
+        $students = Student::find($id);
+
+
+        
+           
+        // $students->First_Name = $request->input('First_Name');
+        // $students->Last_Name = $request->input('Last_Name');
+        // $students->Gender = $request->input('Gender');
+        // $students->Grade_Level = $request->input('Grade_Level');
+        // $students->Birthday = $request->input('Birthday');
+        // $students->Birth_Place = $request->input('Birth_Place');
+        // $students->Student_Address = $request->input('Student_Address');
+        // $students->Parents_Name = $request->input('Parents_Name');
+        // $students->Parents_Contact = $request->input('Parents_Contact');
+        // // $students->Parents_Address = $request->input('Parents_Address');
+        // $students->Parents_Email = $request->input('Parents_Email');
+        $students->status = $request->input('Status');
+           
+       $students->save();
+    
+        return back()->with('success', 'Data Sucessfully updated');
     }
 
     /**

@@ -15,17 +15,17 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('stud_fname_field');
-            $table->string('stud_lname_field');
-            $table->string('stud_gender_field');
-            $table->string('stud_grade_field');
-            $table->date('stud_birth_field');
-            $table->string('stud_bplace_field');
-            $table->string('stud_address_field');
-            $table->string('par_name_field');
-            $table->string('par_contact_field');
-            $table->string('par_address_field');
-            $table->string('par_email_field');
+            $table->string('First_Name');
+            $table->string('Last_Name');
+            $table->string('Gender')->nullable;
+            $table->string('Grade_Level');
+            $table->date('Birthday')->nullable;
+            $table->string('Birth_Place')->nullable;
+            $table->string('Student_Address')->nullable;
+            $table->string('Parents_Name');
+            $table->string('Parents_Contact');
+            $table->string('Parents_Address')->nullable;
+            $table->string('Parents_Email')->nullable;
             $table->string('status')->default('pending');
             $table->timestamps();
         });

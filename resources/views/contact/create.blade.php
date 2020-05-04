@@ -11,17 +11,28 @@
         </p>
     </div>
     
-        @if($message = Session::get('success'))
-        <div class="alert alert-success">{{$message}}</div>
-        @endif
+     
     
-    <div class="contact-form">
+    <div class="contact-form mt-2">
                        {{-- submit to Route::post('/contact','PagesController@store')  --}}
+                       @if($message = Session::get('success'))
+                       <div class="alert alert-success">{{$message}}</div>
+                       @endif
+               
+                       @if ($errors->any())
+                           <div class="alert alert-danger">
+                               <ul class="p-2">
+                                   @foreach ($errors->all() as $error)
+                                       <li>{{ $error }}</li>
+                                   @endforeach
+                               </ul>
+                           </div>
+                       @endif
         <form action="/contact" method="POST" >
             @csrf
             <div class="col-auto">
         
-                <div class="text-warning">{{$errors->first('name')}}</div>
+                {{-- <div class="text-warning">{{$errors->first('name')}}</div> --}}
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
                         <div class="input-group-text border-0 bg-black text-blue contact-input">NAME</div>
@@ -29,7 +40,7 @@
                     <input type="text" name="name" class="form-control border-0 "value="{{old('name')}}" id="inlineFormInputGroup" placeholder="Name">
                 </div>
                 
-                <div class="text-warning">{{$errors->first('email')}}</div>
+                {{-- <div class="text-warning">{{$errors->first('email')}}</div> --}}
                  <div class="input-group mb-2">
                     <div class="input-group-prepend ">
                         <div class="input-group-text border-0 bg-black text-blue contact-input">EMAIL</div>
@@ -37,7 +48,7 @@
                     <input type="text" name="email" class="form-control border-0"value="{{old('email')}}" id="inlineFormInputGroup" placeholder="Email">
                 </div>
                 
-                <div class="text-warning">{{$errors->first('subject')}}</div>
+                {{-- <div class="text-warning">{{$errors->first('subject')}}</div> --}}
                  <div class="input-group mb-2">
                     <div class="input-group-prepend ">
                         <div class="input-group-text border-0 bg-black text-blue subject-prefext  ">SUBJECT</div>
@@ -52,7 +63,7 @@
                         {{old('message')}}
                     </textarea>
                 </div>
-                <div class="text-warning">{{$errors->first('message')}}</div>
+                {{-- <div class="text-warning">{{$errors->first('message')}}</div> --}}
                 <button type="submit"class="contact-btn bg-black text-blue border-0">SEND</button>
             </div>
             

@@ -81,7 +81,7 @@
             <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Number:</span><br/> 246-3-24655593-2</></h6>
             <h6 style="font-size: calc(7px + 0.8vw);"><span class="font-weight-bold">Account Branch:</span><br/> Metrobank Banilad Cebu City Branch</></h6>
             <span class="d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="bottom" title="Be sure you have your payment receipt">
-              <button type="submit" class="btn btn-large btn-success mb-4" data-toggle="modal" data-target="#exampleModal" Enabled>Pay Now </button>
+              <button type="button" class="btn btn-large btn-success mb-4" data-toggle="modal" data-target="#exampleModal" Enabled>Pay Now </button>
               </span>
               <span class="d-inline-block" tabindex="0" data-toggle="tooltip" data-placement="bottom" title="Get deposit slip from ECPAY">
                 <a href="/" class="btn btn-large btn-danger mb-4"  Enabled>Pay Later </a>
@@ -139,16 +139,16 @@
                     <form action="{{route('payments.store')}}" method="POST" enctype="multipart/form-data"  >
                       @csrf
                         <div class="form-group">
-                          <label for="payment_stud_name" class="col-form-label">Student Name</label>
-                          <input type="text" name="payment_stud_name" id="payment_stud_name"class="form-control" >
+                          <label for="Name" class="col-form-label">Student Fullname</label>
+                          <input type="text" name="Name" id="Name"class="form-control" >
                         </div>
                         <div class="form-group">
-                          <label for="recipient-name" class="col-form-label">Amount</label>
-                          <input type="text" name="payment_amount" id="payment_amount"class="form-control">
+                          <label for="Amount" class="col-form-label">Amount</label>
+                          <input type="text" name="Amount" id="Amount" class="form-control">
                         </div>
                         <div class="form-group">
-                          <label class="control-label">Please Upload deposit slip or reciept.</label><br/>
-                          <input type="file" name="payment_receipt_upload" id="receipt_upload" class="filestyle" data-icon="true">
+                          <label class="Upload">Please Upload deposit slip or reciept.</label><br/>
+                          <input type="file" name="Upload" id="Upload" class="filestyle" data-icon="true">
                         </div>
 
                         <div class="modal-footer">
