@@ -27,11 +27,18 @@ class HomeController extends Controller
     {
 
         $count_approved = Student::where('status', 'approved')->get()->count();
+    
+
+
+
+
+
+
 
         $prep_q = Student::select('*')
         ->where('Grade_Level', '=', 'prep')
         ->where('status', '=', 'approved')
-        ->count();
+        ->count()->get();
 
         $g1_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 1')
