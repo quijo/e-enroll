@@ -185,7 +185,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 {{-- for table in found in home --}}
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-<script src="dist/Chart.js">
+<script src="dist/Chart.js"><script>
 
   
 
@@ -193,8 +193,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- jQuery -->
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- ChartJS -->
-{{-- <script src="plugins/chart.js/chart.min.js"></script> --}}
+
+
 <!-- AdminLTE App -->
 <script src="js/adminlte.js"></script>
 <script src="js/demo.js"></script>
