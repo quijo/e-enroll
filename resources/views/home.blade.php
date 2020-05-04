@@ -17,7 +17,7 @@
 
           @endforeach --}}
         
-            <h3>{{$reserved_students}}</h3>
+            <h3>{{$counts}}</h3>
           
             
             <p>Total ReReserved</p>
@@ -33,7 +33,7 @@
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
-            <h3>{{$reserved_students}}</h3>
+            <h3>{{$counts}}</h3>
 
             <p>Basic Education</p>
           </div>

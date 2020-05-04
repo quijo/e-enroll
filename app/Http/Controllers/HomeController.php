@@ -26,12 +26,8 @@ class HomeController extends Controller
     public function index()
     {
 
-        $count_approved = Student::where('status', 'approved')->get()->count();
+        $count_approved = Student::where('status', 'approved')->count();
       
-       
-
-
-
 
 
 
@@ -69,7 +65,7 @@ class HomeController extends Controller
         $g6_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 6')
         ->where('status', '=', 'approved')
-        ->get()->count();
+        ->count();
 
         $g7_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 7')
@@ -79,7 +75,7 @@ class HomeController extends Controller
         $g8_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 8')
         ->where('status', '=', 'approved')
-        ->get()->count();
+        ->count();
 
         $g9_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 9')
@@ -102,12 +98,9 @@ class HomeController extends Controller
         ->get()->count();
 
 
-
-
-
-
+       
         return view('home')
-        ->with('reserved_students',$count_approved)
+       
         ->with('prep', $prep_q)
         ->with('g1', $g1_q)
         ->with('g2', $g2_q)
@@ -120,46 +113,8 @@ class HomeController extends Controller
         ->with('g9', $g9_q)
         ->with('g10', $g10_q)
         ->with('g11', $g11_q)
-        ->with('g12', $g12_q);
-
-
-
-        
-
-
-
-        // $grade1_data = Student::where('Grade_Level','Grade 1')->where('status','approved')->get()->count();
-        // $grade2_data = Student::where('Grade_Level','Grade 2')->where('status','approved')->get()->count();
-        // $grade3_data = Student::where('Grade_Level','Grade 3')->where('status','approved')->get()->count();
-        // $grade4_data = Student::where('Grade_Level','Grade 4')->where('status','approved')->get()->count();
-        // $grade5_data = Student::where('Grade_Level','grade 5')->where('status','approved')->get()->count();
-        // $grade6_data = Student::where('Grade_Level','grade 6')->where('status','approved')->get()->count();
-        // $grade7_data = Student::where('Grade_Level','grade 7')->where('status','approved')->get()->count();
-        // $grade8_data = Student::where('Grade_Level','grade 8')->where('status','approved')->get()->count();
-        // $grade9_data = Student::where('Grade_Level','grade 9')->where('status','approved')->get()->count();
-        // $grade10_data = Student::where('Grade_Level','grade 10')->where('status','approved')->get()->count();
-        // $grade11_data = Student::where('Grade_Level','grade 11')->where('status','approved')->get()->count();
-        // $grade12_data = Student::where('Grade_Level','grade 12')->where('status','approved')->get()->count();
-        
-
-
-
-        //return the counting of approved studens plus per grade level count
-        return view('home')
-        ->with('preschool',$preschool_data)
-        ->with('grade1',$grade1_data)
-        ->with('grade2',$grade2_data)
-        ->with('grade3',$grade3_data)
-        ->with('grade4',$grade4_data)
-        ->with('grade5',$grade5_data)
-        ->with('grade6',$grade6_data)
-        ->with('grade7',$grade7_data)
-        ->with('grade8',$grade8_data)
-        ->with('grade9',$grade9_data)
-        ->with('grade10',$grade10_data)
-        ->with('grade11',$grade11_data)
-        ->with('grade12',$grade12_data)
-        ->with('counts',$reserved_counts);
+        ->with('g12', $g12_q)
+        ->with('counts',$count_approved);
 
 
         
@@ -182,7 +137,7 @@ class HomeController extends Controller
     }
 
    
-  
+
 
     public function reserved_list()
     {

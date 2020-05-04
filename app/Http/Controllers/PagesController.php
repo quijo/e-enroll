@@ -20,9 +20,6 @@ class PagesController extends Controller
     }
 
 
-    // public function contact(){
-    //     return view('contact');
-    // }
     public function create(){
         return view('contact.create');
     }
@@ -40,21 +37,14 @@ class PagesController extends Controller
      
         Mail::to ('infotech@vnbc.edu.ph')->send(new ContactFormMail($data));
         return back()->with('success', 'Thank you');
-      
-            //send email
-
-        // dd(request()->all());
+  
     }
 
 
-  
-    
     public function payment(){
         return view('payment');
     }
-    // public function reserved_list(){
-    //     return view('reserved_list');
-    // }
+ 
     public function thankyou(){
         return view('thankyou');
     }

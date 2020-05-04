@@ -23,6 +23,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/style.css">
   
@@ -143,9 +144,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    
     <div class="content">
       @yield('content')
     </div>
+   
 
 
 
@@ -176,18 +179,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
+
 <script src="plugins/jquery/jquery.min.js"></script>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+{{-- for table in found in home --}}
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-
+<script src="dist/Chart.js">
 
   
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> --}}
+
 <!-- jQuery -->
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
