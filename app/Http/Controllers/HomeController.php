@@ -44,7 +44,7 @@ class HomeController extends Controller
 
         //return the counting of approved studens plus per grade level count
         return view('home')->with('counts',$reserved_counts,)->with(compact
-        (
+        ([
             'preschool',
             'grade1',
             'grade2',
@@ -58,7 +58,7 @@ class HomeController extends Controller
             'grade10',
             'grade11',
             'grade12'
-        ));
+        ]));
       
     }
 
