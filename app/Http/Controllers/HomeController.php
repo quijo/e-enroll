@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
 
-        $preschool = Student::where('Grade_Level','Preschool')->count();
+     $preschool = Student::where('Grade_Level','Preschool')->where('status','approved')->get()->count();
         $grade1 = Student::where('Grade_Level','Grade 1')->where('status','approved')->get()->count();
         $grade2 = Student::where('Grade_Level','Grade 2')->where('status','approved')->get()->count();
         $grade3 = Student::where('Grade_Level','Grade 3')->where('status','approved')->get()->count();
