@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="inputlastname">Lastname</label>
-                                    <input name="Last_Name" value="{{old('Last_Name')}}" placeholder="Enter Lastn" id="stud_lname" input type="text" class="form-control  border-0 "  >
+                                    <input name="Last_Name" value="{{old('Last_Name')}}" placeholder="Enter Lastname" id="stud_lname" input type="text" class="form-control  border-0 "  >
                                 </div>
                             </div>
           

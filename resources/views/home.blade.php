@@ -17,7 +17,7 @@
 
           @endforeach --}}
         
-            <h3>{{$counts}}</h3>
+            <h3>{{$reserved_students}}</h3>
           
             
             <p>Total ReReserved</p>
@@ -33,7 +33,7 @@
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
-            <h3>{{$counts}}</h3>
+            <h3>{{$reserved_students}}</h3>
 
             <p>Basic Education</p>
           </div>
@@ -97,7 +97,7 @@
 {{-- ###################################################### --}}
 
 
-dd({{$grade8}});
+
 @endsection
 
 @section('barChart')
@@ -105,7 +105,7 @@ dd({{$grade8}});
 <script>
   //by chartjs.org
   var ctx = document.getElementById('myChart').getContext('2d');
-  var studentDb = [{{$preschool}},{{$grade1}},{{$grade2}},{{$grade3}},{{$grade4}}, {{$grade5}},{{$grade6}},{{$grade7}},{{$grade8}},{{$grade9}},{{$grade10}},{{$grade11}},{{$grade12}}];
+  var studentDb = [{{$prep}},{{$g1}},{{$g2}},{{$g3}},{{$g4}}, {{$g5}},{{$g6}},{{$g7}},{{$g8}},{{$g9}},{{$g10}},{{$g11}},{{$g12}}];
   var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
