@@ -111,7 +111,7 @@
           labels: ['Preschool','Grade1', 'Grade2', 'Grade3', 'Grade4', 'Grade5','Grade6','Grade7','Grade8','Grade9','Grade10','Grade11','Grade12',],
           datasets: [{
               label: 'Reservation',
-              data: [{{$preschool}},{{$grade1}},{{$grade2}},{{$grade3}},{{$grade4}}, {{$grade5}},{{$grade6}},{{$grade7}},{{$grade8}},{{$grade9}},{{$grade10}},{{$grade11}},{{$grade12}}],
+              data: [{{$counts}},{{$grade1}},{{$grade2}},{{$grade3}},{{$grade4}}, {{$grade5}},{{$grade6}},{{$grade7}},{{$grade8}},{{$grade9}},{{$grade10}},{{$grade11}},{{$grade12}}],
               backgroundColor: [
                   'rgba(255, 99, 132,1 )',
                   'rgba(54, 162, 235, 1)',
