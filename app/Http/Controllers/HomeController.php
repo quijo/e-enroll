@@ -27,7 +27,8 @@ class HomeController extends Controller
     {
 
         $count_approved = Student::where('status', 'approved')->get()->count();
-    
+      
+       
 
 
 
@@ -38,37 +39,37 @@ class HomeController extends Controller
         $prep_q = Student::select('*')
         ->where('Grade_Level', '=', 'prep')
         ->where('status', '=', 'approved')
-        ->count()->get();
+        ->get()->count();
 
         $g1_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 1')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g2_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 2')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g3_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 3')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g4_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 4')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g5_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 5')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g6_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 6')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g7_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 7')
@@ -78,27 +79,27 @@ class HomeController extends Controller
         $g8_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 8')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g9_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 9')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();;
 
         $g10_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 10')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g11_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 11')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
         $g12_q = Student::select('*')
         ->where('Grade_Level', '=', 'grade 12')
         ->where('status', '=', 'approved')
-        ->count();
+        ->get()->count();
 
 
 
