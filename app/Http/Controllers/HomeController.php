@@ -25,7 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $reserved_counts = Student::where('status', 'approved')->get()->count();
 
         $preschool = Student::where('Grade_Level','Preschool')->count();
         $grade1 = Student::where('Grade_Level','Grade 1')->where('status','approved')->count();
@@ -40,6 +39,8 @@ class HomeController extends Controller
         $grade10 = Student::where('Grade_Level','grade 10')->where('status','approved')->count();
         $grade11 = Student::where('Grade_Level','grade 11')->where('status','approved')->count();
         $grade12 = Student::where('Grade_Level','grade 12')->where('status','approved')->count();
+        $reserved_counts = Student::where('status', 'approved')->get()->count();
+
 
 
         //return the counting of approved studens plus per grade level count
