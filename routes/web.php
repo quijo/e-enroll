@@ -5,7 +5,6 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::get('/dashboard', 'PagesController@chartUpdate');
 Route::get('/','PagesController@index');
 Route::get('/basiced','PagesController@basiced');
 Route::get('/college','PagesController@college');

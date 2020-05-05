@@ -11,12 +11,8 @@
                 <div class="bluebox"><h1>PRE-ENROLLMENT</h1></div>
                 <div class="prereg-form">
 
-                       <p> Reprehenderit enim nostrud tempor cillum sunt consectetur in sit id.
-                        Veniam ipsum occaecat voluptate elit cillum adipisicing sint esse irure nulla.
-                        Fugiat ullamco consequat commodo esse irure officia culpa esse tempor
-                        consequat eu cillum sint. Laborum excepteur ipsum pariatur enim adipisicing
-                        consequat consequat cillum. Reprehenderit est ipsum proident occaecat minim 
-                        voluptate adipisicing mollit elit.</p>
+                       <h4> “The difference between school and life? In school, you're taught a lesson and then given a test. In life, you're given a test that teaches you a lesson.”<br/>
+                        Tom Bodett</h4>
 
                         <div class="buttons">
                                 <a class="btn-top pre-enrollment-btn" href="{{url('/basiced') }}" type="button">Basic Education</a>

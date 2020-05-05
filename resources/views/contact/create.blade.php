@@ -1,14 +1,10 @@
 @extends('template.app')
 
 @section('content')
-<div class="contact-container">
-    <div class="contact-header">
-        <h1>Contact Us</h1>
-        <p>
-            Nulla labore pariatur mollit in incididunt minim enim. 
-            Fugiat ullamco esse labore ut aute id. Officia dolore qui elit
-            excepteur velit minim dolor dolore incididunt voluptate Lorem ut minim nisi.
-        </p>
+<div class="contact-container" >
+    <div class="contact-header" style="width:100%">
+        <h1 >Contact Us</h1>
+      
     </div>
     
      
@@ -37,7 +33,7 @@
                     <div class="input-group-prepend">
                         <div class="input-group-text border-0 bg-black text-blue contact-input">NAME</div>
                     </div>
-                    <input type="text" name="name" class="form-control border-0 "value="{{old('name')}}" id="inlineFormInputGroup" placeholder="Name">
+                    <input type="text" name="name" class="form-control border-0 "value="{{old('name')}}" id="inlineFormInputGroup" placeholder="Enter your name">
                 </div>
                 
                 {{-- <div class="text-warning">{{$errors->first('email')}}</div> --}}
@@ -45,7 +41,7 @@
                     <div class="input-group-prepend ">
                         <div class="input-group-text border-0 bg-black text-blue contact-input">EMAIL</div>
                     </div>
-                    <input type="text" name="email" class="form-control border-0"value="{{old('email')}}" id="inlineFormInputGroup" placeholder="Email">
+                    <input type="text" name="email" class="form-control border-0"value="{{old('email')}}" id="inlineFormInputGroup" placeholder="Enter your email">
                 </div>
                 
                 {{-- <div class="text-warning">{{$errors->first('subject')}}</div> --}}

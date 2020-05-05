@@ -35,7 +35,7 @@ class PagesController extends Controller
         ]);
 
      
-        Mail::to ('infotech@vnbc.edu.ph')->send(new ContactFormMail($data));
+        Mail::to ('principal@vnbc.edu.ph')->send(new VNBCContactFormMail($data));
         return back()->with('success', 'Thank you');
   
     }

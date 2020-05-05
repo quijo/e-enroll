@@ -15,7 +15,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="css/all.min.css">
   <!-- Theme style -->
 
-  <link rel="stylesheet" href="css/adminlte.css">
+  <link rel="stylesheet" href="css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -23,7 +23,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
-
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/style.css">
   
@@ -179,64 +178,31 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
+{{-- <script src="plugins/jquery/jquery.min.js"></script> --}}
 
-<script src="plugins/jquery/jquery.min.js"></script>
 
-{{-- for table in found in home --}}
+<script src="js/app.js"></script>
+
 <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-<script src="dist/Chart.js"><script>
+
 
   
 
-
+<script src="{{asset('dist/Chart.js')}}"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> --}}
 <!-- jQuery -->
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-
+<!-- ChartJS -->
+{{-- <script src="plugins/chart.js/chart.min.js"></script> --}}
 <!-- AdminLTE App -->
 <script src="js/adminlte.js"></script>
 <script src="js/demo.js"></script>
+<script src="js/mydatatable.js"></script>
 
 
 
-<script type="text/javascript">
-  
-  $(document).ready(function(){
-                    //the table id  .DataTable is a function
-      var table = $('#datatable').DataTable();
-      //start edit record .edit class of of updtate button
-      table.on('click', '.edit', function(){
-
-          $tr =$(this).closest('tr');
-          if ($($tr).hasClass('child')){
-              $tr = $tr.prev('.parent');
-
-          }
-
-          var data = table.row($tr).data();
-          console.log(data);
-
-     
-          // $('#created_at').val(data[1]);
-          // $('#First_Name').val(data[2]);
-          // $('#Last_Name').val(data[3]);
-          // $('#Gender').val(data[4]);
-          // $('#Grade_Level').val(data[5]);
-          // $('#Parents_Contact').val(data[6]);
-          // $('#Parents_Email').val(data[7]);
-          // $('#Status').val(data[8]);
-       
-
-          $('#edit_status_form').attr('action', '/students/' + data[0]);
-          $('#edit_modal').modal('show');
-      });
-  })
-     
-  </script>
-
-  
   @yield('barChart')
 
 

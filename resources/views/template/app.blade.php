@@ -69,8 +69,8 @@
 
 
 {{-- <div class="up"style="width:50px;height:50px; background:green;position:fixed ; right:0; bottom:50px; right:20px; z-index:1000;visibility:hidden; " ></div> --}}
-<footer>
-<div class="container">
+<footer >
+<div class="container fixed">
     <div class="row">
         <div class="col-sm-6">
              <div class="theme">

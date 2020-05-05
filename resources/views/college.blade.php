@@ -13,15 +13,15 @@
                     <form action="{{route('col_students.store')}}" method="POST">
                             @csrf
                          <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-6 ">
                                 <label for="inputfirstname_middlename">Firstname and Middlename
                                 </label>
-                                <input name="col_fname" id="col_fname" type="text" class="form-control" >
+                                <input name="firstname" id="firstname"  value="{{old('First_Name')}}" type="text" class="form-control border-0" placeholder="Enter Firstname with Middlename">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="inputlastname">Lastname</label>
-                                <input name="col_lname" id="col_lname" input type="text" class="form-control"  >                                    
+                                <input name="col_lname" id="col_lname" input type="text" class="form-control" placeholder="Enter Lastname" >                                    
                             </div>
                         </div>
 
