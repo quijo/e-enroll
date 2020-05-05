@@ -7549,7 +7549,7 @@ function throttled(fn, thisArg) {
 		if (!ticking) {
 			ticking = true;
 			helpers$1.requestAnimFrame.call(window, function() {
-				ticking = false;
+				ticking = true;
 				fn.apply(thisArg, args);
 			});
 		}
