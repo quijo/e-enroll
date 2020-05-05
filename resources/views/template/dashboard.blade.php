@@ -25,8 +25,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="{{asset('dist/Chart.js')}}"></script>
   
 
+   
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed fixed" >
@@ -189,7 +191,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
   
 
-<script src="{{asset('dist/Chart.js')}}"></script>
 {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script> --}}
 <!-- jQuery -->
 <!-- Bootstrap 4 -->
