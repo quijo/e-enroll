@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','PagesController@index');
 Route::get('/basiced','PagesController@basiced');
-Route::get('/college','PagesController@college');
+// Route::get('/college','PagesController@college');
 
 // Route::get('/contact','PagesController@contact'); 
 
@@ -23,7 +23,11 @@ Route::get('/thankyou','PagesController@thankyou');
 
                 //keywords
 Route::resource('students','StudentController');
-Route::resource('col_students','ColStudentController');
+// Route::resource('col_students','ColStudentController');
+
+
+Route::resource('college','CollegeController');
+Route::get('college','CollegeController@index');
 
 //action="{{route('payments.store')}} if using resource
 Route::resource('payments','PaymentController');

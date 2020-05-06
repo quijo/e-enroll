@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCollegeTable extends Migration
+class CreateCollegesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,20 @@ class CreateCollegeTable extends Migration
      */
     public function up()
     {
-        Schema::create('college', function (Blueprint $table) {
+        Schema::create('colleges', function (Blueprint $table) {
             $table->id();
             $table->string('firstname');
             $table->string('lastname');
             $table->string('gender');
             $table->string('course');
-            $table->date('birthday');
-            $table->string('birthplace');
-            $table->string('student_address');
+            $table->date('birthday')->nullable();
+            $table->string('birthplace')->nullable();
+            $table->string('students_address')->nullable();
             $table->string('parents_name');
             $table->string('parents_contact');
-            $table->string('parents_address');
-            $table->string('parents_email');
-            $table->string('status');
+            $table->string('parents_address')->nullable();
+            $table->string('email')->nullable();
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
@@ -38,6 +38,6 @@ class CreateCollegeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('college');
+        Schema::dropIfExists('colleges');
     }
 }

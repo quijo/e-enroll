@@ -14,7 +14,7 @@ class ColStudentController extends Controller
      */
     public function index()
     {
-        //
+        return view('college');
     }
 
     /**
@@ -34,25 +34,48 @@ class ColStudentController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
+
     {
-        $col_students = array(
+
+  //college form input data
+  $data = request()->validate([
+    'firstname'=>'required',
+    'firstname'=>'required',
+    'gender'=>'required',
+    'course'=>'required',
+    'birthday'=>'nullable',
+    'birthplace'=>'nullable',
+    'student_address'=>'required',
+    'parents_name'=>'required',
+    'parents_contact'=>'required',
+    'parents_address'=>'nullable',
+    'email'=>'nullable|email',
+]);
+
+
+        $college = array(
             //for database                //from form submited
-            'col_stud_fname_field'=>$request->col_fname,
-            'col_stud_lname_field'=>$request->col_lname,
-            'col_stud_gender_field'=>$request->col_gender,
-            'col_stud_course_field'=>$request->col_course,
-            'col_stud_birth_field'=>$request->col_birth,
-            'col_stud_bplace_field'=>$request->col_bplace,
-            'col_stud_address_field'=>$request->col_address,
-            'col_par_name_field'=>$request->col_par_name,
-            'col_par_contact_field'=>$request->col_par_contact,
-            'col_par_address_field'=>$request->col_par_address,
-            'col_par_email_field'=>$request->col_par_email,
+            'firstname'=>$request->firstname,
+            'lastname'=>$request->lastname,
+            'gender'=>$request->gender,
+            'course'=>$request->course,
+            'birthday'=>$request->birthday,
+            'birthplace'=>$request->birthplace,
+            'student_address'=>$request->student_address,
+            'parents_name'=>$request->parents_name,
+            'parents_contact'=>$request->parents_contact,
+            'parent_address'=>$request->parents_address,
+            'email'=>$request->email,
         );
-        colStudent::create($col_students);
+
+        colStudent::create($college);
+
+
+       
         
-        //redirect to  payment mode
-        return redirect('payment');
+       
+
+     
 
     }
 
