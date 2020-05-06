@@ -105,7 +105,7 @@
 <script>
   //by chartjs.org
   var ctx = document.getElementById('myChart').getContext('2d');
-  var studentDb = [{{json_encode($prep)}},{{$g1}},{{$g2}},{{$g3}},{{$g4}}, {{$g5}},{{json_encode($g6)}},{{$g7}},{{$g8}},{{$g9}},{{$g10}},{{$g11}},{{$g12}}];
+  var studentDb = [{{$prep}},{{$g1}},{{$g2}},{{$g3}},{{$g4}}, {{$g5}},{{$g6}},{{$g7}},{{$g8}},{{$g9}},{{$g10}},{{$g11}},{{$g12}}];
   var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
