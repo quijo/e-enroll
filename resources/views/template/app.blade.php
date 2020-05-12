@@ -52,7 +52,7 @@
                             </li>
                 
                             <li class="nav-item active">
-                                <a class="nav-link" href="{{url('login')}}">ADMIN</a>
+                                <a class="nav-link" href="{{route('login')}}">ADMIN</a>
                             </li>
                         </ul>
                     </div>
