@@ -115,62 +115,16 @@ class StudentController extends Controller
     public function update(Request $request, $id)
     {
 
-       
-     
               //validate inputs
         $this->validate($request,[
-            // 'First_Name'=>'required',
-            // 'Last_Name'=>'required',
-            // 'Gender'=>'required',
-            // 'Grade_Level'=>'required',
-            // 'Birthday'=>'required',
-            // 'Birth_Place'=>'required',
-            // 'Student_Address'=>'required',
-            // 'Parents_Name'=>'required',
-            // 'Parents_Contact'=>'required',
-            // // 'Parents_Address'=>'required',
-            // 'Parents_Email'=>'required|email',
+     
             'status'=>'Status',
-        ]);
-        // return back()->with('success', 'data has content');
-
-        // $data = request()->validate([
-            // 'First_Name'=>'required',
-            // 'Last_Name'=>'required',
-            // 'Gender'=>'required',
-            // 'Grade_Level'=>'required',
-        //     'Birthday'=>'required',
-        //     'Birth_Place'=>'required',
-        //     'Student_Address'=>'required',
-        //     'Parents_Name'=>'required',
-            // 'Parents_Contact'=>'required',
-        //     'Parents_Address'=>'required',
-            // 'Parents_Email'=>'required|email',
-            // 'Status'=>'required|email',
-        // ]);
-
-       
+        ]); 
 
         $students = Student::find($id);
-
-
-        
-           
-        // $students->First_Name = $request->input('First_Name');
-        // $students->Last_Name = $request->input('Last_Name');
-        // $students->Gender = $request->input('Gender');
-        // $students->Grade_Level = $request->input('Grade_Level');
-        // $students->Birthday = $request->input('Birthday');
-        // $students->Birth_Place = $request->input('Birth_Place');
-        // $students->Student_Address = $request->input('Student_Address');
-        // $students->Parents_Name = $request->input('Parents_Name');
-        // $students->Parents_Contact = $request->input('Parents_Contact');
-        // // $students->Parents_Address = $request->input('Parents_Address');
-        // $students->Parents_Email = $request->input('Parents_Email');
         $students->status = $request->input('Status');
            
        $students->save();
-    
         return back()->with('success', 'Data Sucessfully updated');
     }
 

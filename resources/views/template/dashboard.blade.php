@@ -111,7 +111,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <li class="nav-item">
                     <a href="{{url('reserved_list')}}" class="nav-link">
                       <i class="fas fa-list nav-icon"></i>
-                      <p>Reserved List</p>
+                      <p>Basic Ed List</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{url('college_list')}}" class="nav-link">
+                      <i class="fas fa-list nav-icon"></i>
+                      <p>College List</p>
                     </a>
                   </li>
                   <li class="nav-item">

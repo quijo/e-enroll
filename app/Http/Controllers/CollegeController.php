@@ -10,7 +10,15 @@ class CollegeController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * 
+     * 
+     * 
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return view('college');
@@ -23,6 +31,11 @@ class CollegeController extends Controller
     public function create()
     {
         //
+    }
+
+    public function college_list(){
+        $reserved_college = College::all();
+        return view('college_list')->with('reserved_colleges', $reserved_college);
     }
 
     /**

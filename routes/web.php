@@ -28,6 +28,7 @@ Route::resource('students','StudentController');
 
 Route::resource('college','CollegeController');
 Route::get('college','CollegeController@index');
+Route::get('college_list', 'CollegeController@college_list');
 
 //action="{{route('payments.store')}} if using resource
 Route::resource('payments','PaymentController');
