@@ -2,6 +2,7 @@
 @extends('template.dashboard')
 
 
+
 @section('content')
 
     @if($message = Session::get('success'))
@@ -43,7 +44,13 @@
             <div class="tab-content  " id="myTabContent" >
                 <div class="tab-pane fade show active m-2" id="student" role="tabpanel" aria-labelledby="student-tab">
                     <!--student tab content-->
-                   
+                 
+                     @if($remarks < 0)
+                         {{$remarks->Id}}
+                     
+                     @endif
+                  
+
                     <table class="table table-striped " id="datatable">
 
                         <thead>
@@ -56,6 +63,7 @@
                                 <th style="width: 10%"> Grade</th>
                                 <th style="width: 5%"> Contact</th>
                                 <th style="width: 10%"> Email </th>
+                                <th style="width:">Remarks</th>
                                 <th style="width: 5%">Status</th>
                                 <th style="width: 5%">Change</th>
                             </tr>
@@ -71,7 +79,16 @@
                                     <td>{{$reserved->Gender}}</td>
                                     <td>{{$reserved->Grade_Level}}</td>
                                     <td>{{$reserved->Parents_Contact}}</td>
+                                  
+                                   
                                     <td><a href="mailto:{{$reserved->Parents_Email}}">{{$reserved->Parents_Email}}</td>
+                                  
+
+                                   
+                                      
+                                   
+                                      
+                                   
 
                                     @if ($reserved->status == 'pending')
                                         <td style="color:red">{{$reserved->status}}</td>

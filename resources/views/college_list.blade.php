@@ -2,7 +2,8 @@
 
 
 @section('content')
-@foreach ($reserved_colleges as $reserve )
+
+
 
 
 <div class="card m-2 " style="overflow: hidden">
@@ -22,9 +23,9 @@
     </ul>
 
     <div class="tab-content  " id="myTabContent" >
-        <div class="tab-pane fade show active m-2" id="student" role="tabpanel" aria-labelledby="student-tab">
+        <div class="tab-pane fade show active m-2" id="student" role="tabpanel" aria-labelledby="student-tab"> 
             <!--student tab content-->
-           
+            
             <table class="table table-striped " id="datatable">
 
                 <thead>
@@ -63,9 +64,9 @@
                             @endif
                             
 
-                            <td> 
-                              {{-- <i class="fas fa-edit text-success" > </i>--}}
-                                  <a href="#"  class="btn btn-warning edit btn-sm" > Status  </a>
+                            <td>  
+                              <i class="fas fa-edit text-success" > </i>
+                                <a href="#"  class="btn btn-warning edit btn-sm" > Status  </a>
                              
                             </td>
                         </tr>
@@ -73,7 +74,7 @@
                 </tbody>
 
             </table>
-   
+  
             <!--end student tab content-->
         </div> <!--end student tab pane-->
 
@@ -106,9 +107,9 @@
         </div>
         <!--end parent tab pane-->
     </div><!--tab content-->
-</div> <!--card main wrap-->
+ </div> <!--card main wrap--> 
 {{-- ############################ End of Tab ############################### --}}
 
     
-@endforeach
+
 @endsection

@@ -65,10 +65,17 @@ class HomeController extends Controller
 
     public function reserved_list()
     {
+        $remark = Payment::all();
         $reserved = Student::all();
-        return view('reserved_list')->with('reserveds', $reserved);
+        return view('reserved_list')
+        ->with('reserveds', $reserved)
+        ->with('remarks','$remark');
 
 
+
+      
     }
+
+
  
 }

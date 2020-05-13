@@ -35,6 +35,9 @@ Route::resource('payments','PaymentController');
 
 Route::get('/paid', 'PaymentController@index');
 
+
+Route::get('/test', 'StudentController@index');
+
 // Route::get('editStatus', function(){
 //     return view('editStatus');
 // });
@@ -54,6 +57,11 @@ Route::get('/home', 'HomeController@grade_levels');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/payment_remarks', 'HomeController@payment_remarks');
+
+
+Route::resource('payment_status','StudentController');
 
 
 

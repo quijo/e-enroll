@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use App\Payment;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -14,9 +15,12 @@ class StudentController extends Controller
      */
     public function index()
     {
+       
     
+       
     }
 
+  
     /**
      * Show the form for creating a new resource.
      *
@@ -138,4 +142,7 @@ class StudentController extends Controller
     {
         //
     }
+
+
+
 }
