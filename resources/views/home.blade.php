@@ -17,7 +17,7 @@
 
           @endforeach --}}
         
-            <h3>{{$counts}}</h3>
+            <h3>{{$basiced_count+$college_count}}</h3>
           
             
             <p>Total ReReserved</p>
@@ -33,7 +33,7 @@
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
-            <h3>{{$counts}}</h3>
+            <h3>{{$basiced_count}}</h3>
 
             <p>Basic Education</p>
           </div>
@@ -48,7 +48,7 @@
         <!-- small box -->
         <div class="small-box bg-warning">
           <div class="inner">
-            <h3>0</h3>
+            <h3>{{$college_count}}</h3>
 
             <p>College</p>
           </div>
@@ -77,7 +77,7 @@
     </div>
     <!-- /.row -->
      <!--per level-->
-      <div class="row">
+      <div class="row ">
         <div class="col-sm-12">
           <div class="card card-info">
             <div class="card-header">
@@ -105,11 +105,11 @@
 <script>
   //by chartjs.org
   var ctx = document.getElementById('myChart').getContext('2d');
-  var studentDb = [{{$prep}},{{$g1}},{{$g2}},{{$g3}},{{$g4}}, {{$g5}},{{$g6}},{{$g7}},{{$g8}},{{$g9}},{{$g10}},{{$g11}},{{$g12}}];
+  var studentDb = [{{$preschool}},{{$g1}},{{$g2}},{{$g3}},{{$g4}}, {{$g5}},{{$g6}},{{$g7}},{{$g8}},{{$g9}},{{$g10}},{{$g11}},{{$g12}},{{$college_count}}];
   var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-          labels: ['Preschool','Grade1', 'Grade2', 'Grade3', 'Grade4', 'Grade5','Grade6','Grade7','Grade8','Grade9','Grade10','Grade11','Grade12',],
+          labels: ['Preschool','Grade1', 'Grade2', 'Grade3', 'Grade4', 'Grade5','Grade6','Grade7','Grade8','Grade9','Grade10','Grade11','Grade12','College'],
           datasets: [{
               label: 'Reservation',
               data: studentDb,
@@ -127,7 +127,8 @@
                   'rgba(153, 102, 255,1)',
                   'rgba(255, 159, 64, 1)',
                   'rgba(255, 99, 132,1 )',
-                  'rgba(54, 162, 235, 1)'
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)'
               ],
               borderColor: [
                   'rgba(255, 99, 132, 1)',
@@ -143,7 +144,8 @@
                   'rgba(153, 102, 255, 1)',
                   'rgba(255, 159, 64, 1)',
                   'rgba(255, 99, 132,1 )',
-                  'rgba(54, 162, 235, 1)'
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)'
               ],
               borderWidth: 1
           }]

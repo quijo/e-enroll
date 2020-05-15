@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Payment;
+use App\Student;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -17,9 +18,10 @@ class PaymentController extends Controller
         $payment_created = Payment::all();
         return view('paid')->with('pay', $payment_created);
       
-       
+     
     }
 
+  
     /**
      * Show the form for creating a new resource.
      *
@@ -59,11 +61,13 @@ class PaymentController extends Controller
         // dd($payment_data);
             // dd($payment_data);
             Payment::create($payment_data);
-            // return back('thankyou')->with('data', $data);
+            return back()->with('success', 'Payment Successfull! your application is now under review, we will get back to you as soon as posible.');
+         
             
            
 
     }
+
 
 
 

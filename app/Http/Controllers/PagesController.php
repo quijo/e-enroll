@@ -13,13 +13,14 @@ class PagesController extends Controller
     }
 
     public function basiced(){
+    
         return view('basiced');
     }
     public function college(){
         return view('college');
     }
 
-
+ 
     public function create(){
         return view('contact.create');
     }

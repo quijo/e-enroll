@@ -5,8 +5,18 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 
+
+
+
+
+
+
+
+
 class Student extends Model
 {
+
+
     protected $fillable=[
         'First_Name',
         'Last_Name',
@@ -22,6 +32,18 @@ class Student extends Model
     ];
 
     public $timestamp = true;
+
+
+
+
+// start one to one relationship
+
+public function payment()
+{
+    return $this->hasOne('App\Payment','foreign_key', 'student_id');
+}
+
+//end one to one relationship
 
 
 }

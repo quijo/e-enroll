@@ -80,7 +80,7 @@ class StudentController extends Controller
         );
 
         Student::create($payments);
-        return back()->with('success', 'Thank you');
+        return redirect('payment')->with('success', 'Thank for your interest in enrolling at vnbc.  For reservation fee please select account and comeback if you have payment receipt from the bank.');
         
         //success page
        // return ;

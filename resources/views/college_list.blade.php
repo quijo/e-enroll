@@ -30,16 +30,16 @@
 
                 <thead>
                     <tr>
-                        <th style="width: 5%">Id</th>
+                        <th style="width: 5%;">Id</th>
                         <th style="width: 5%"> Posted </th>
-                        <th style="width: 25%">Firstname </th>
-                        <th style="width: 25%"> Lastname</th>
+                        <th style="width: 20%">Firstname </th>
+                        <th style="width: 20%"> Lastname</th>
                         <th style="width: 5%"> Gender </th>
                         <th style="width: 10%"> Grade</th>
                         <th style="width: 5%"> Contact</th>
                         <th style="width: 10%"> Email </th>
                         <th style="width: 5%">Status</th>
-                        <th style="width: 5%">Change</th>
+                        <th style="width: 10%">Change</th>
                     </tr>
                 </thead>
 
@@ -50,7 +50,7 @@
                             <td>{{$reserved->created_at->format('d.M.y')}}</td>
                             <td>{{$reserved->firstname}}</td>
                             <td>{{$reserved->lastname}}</td>
-                            <td>{{$reserved->Gender}}</td>
+                            <td>{{$reserved->gender}}</td>
                             <td>{{$reserved->course}}</td>
                             <td>{{$reserved->parents_contact}}</td>
                             <td><a href="mailto:{{$reserved->email}}">{{$reserved->email}}</td>
@@ -111,5 +111,93 @@
 {{-- ############################ End of Tab ############################### --}}
 
     
+
+
+
+
+
+
+
+
+
+  {{-- ############################ Start Reserved Appproved Modal ############################### --}}
+  <div class="modal fade" id="edit_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        
+        
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change Status</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div><!--/modal-header-->
+
+        {{-- Start Modal Body --}}
+        <div class="modal-body"> 
+
+
+
+
+            <form action="/college_status" method="POST" id="college_status_form" >
+              @csrf
+              @method('PUT')
+
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" name="Status" value="pending"  id="Status" >
+                    <label class="form-check-label" for="Status" >
+                      Pending
+                    </label> 
+                </div>
+
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" name="Status"  value="approved" id="Status"  >
+                    <label class="form-check-label" for="Status">
+                      Approved
+                    </label>
+                  </div>
+
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" name="Status"  value="Canceled" id="Status"  >
+                    <label class="form-check-label" for="Status">
+                      Cancel
+                    </label>
+                </div>
+
+                <div class="modal-footer float-left">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" >Update</button>
+                </div>
+               
+            </form>
+          
+
+          </div><!--/modal body-->
+        {{-- End Modal Body --}}
+
+
+        </div><!--modal content-->
+    </div><!--modal dialog-->
+</div> <!--end main modal-->
+{{-- ############################ End Reserved Appproved Modal ############################### --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @endsection

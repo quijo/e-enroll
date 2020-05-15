@@ -22,6 +22,24 @@
       <span style="color:red;">IMPORTANT!</span> Thank you for filling up your reservation form.  Be informed that your transaction will become official as soon we recieve your uploaded scanned or photo of
       your proof of payment.  Thank you for choosing Visayan Nazarene Bible College as part of your learning.
     </div>
+
+
+
+    <div class="m-1">
+      @if($message = Session::get('success'))
+      <div class="alert alert-success">{{$message}}</div>
+      @endif
+
+      @if ($errors->any())
+          <div class="alert alert-danger">
+              <ul class="p-2">
+                  @foreach ($errors->all() as $error)
+                      <li>{{ $error }}</li>
+                  @endforeach
+              </ul>
+          </div>
+       @endif
+  </div>
      {{-- ################################################################## --}}
     {{-- #################      end of important notes   ################### --}}
     {{-- ################################################################## --}}

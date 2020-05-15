@@ -36,8 +36,15 @@ class CollegeController extends Controller
     public function college_list(){
         $reserved_college = College::all();
         return view('college_list')->with('reserved_colleges', $reserved_college);
-     
     }
+
+    Public function count_approved()
+    {
+        // $count_approved = College::where('status', 'approved')->count();
+        //  return view('home')->with('college_count', $count_approved);
+      
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -113,9 +120,20 @@ class CollegeController extends Controller
      * @param  \App\College  $college
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, College $college)
+    public function update(Request $request, $id)
     {
-        //
+
+              //validate inputs
+        $this->validate($request,[
+     
+            'status'=>'Status',
+        ]); 
+
+        $students = College::find($id);
+        $students->status = $request->input('Status');
+           
+       $students->save();
+        return back()->with('success', 'Data Sucessfully updated');
     }
 
     /**

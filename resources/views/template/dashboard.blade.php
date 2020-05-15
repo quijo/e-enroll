@@ -122,7 +122,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </li>
                   <li class="nav-item">
                     <a href="{{url('paid')}}" class="nav-link">
-                      <i class="fas fa-money-bill-wave"></i>
+                      <i class="fas fa-money-bill-wave mr-2"></i>
                       <p>Paid</p>
                     </a>
                   </li>
@@ -207,6 +207,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="js/adminlte.js"></script>
 <script src="js/demo.js"></script>
 <script src="js/mydatatable.js"></script>
+<script src="js/college_list.js"></script>
 
 
 

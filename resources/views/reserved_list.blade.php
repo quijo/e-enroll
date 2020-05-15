@@ -24,6 +24,11 @@
     {{-- #######################################THIS PAGE CONTAIN RESERVEATION LIST############################################# --}}
     {{-- ####################################################################################################################### --}}
 
+
+ 
+
+
+
     {{-- ############################ Star tab ############################### --}}
         <div class="card m-2 " style="overflow: hidden">
             <div class="card-header">
@@ -63,7 +68,7 @@
                                 <th style="width: 10%"> Grade</th>
                                 <th style="width: 5%"> Contact</th>
                                 <th style="width: 10%"> Email </th>
-                                <th style="width:">Remarks</th>
+                            
                                 <th style="width: 5%">Status</th>
                                 <th style="width: 5%">Change</th>
                             </tr>
@@ -82,8 +87,7 @@
                                   
                                    
                                     <td><a href="mailto:{{$reserved->Parents_Email}}">{{$reserved->Parents_Email}}</td>
-                                  
-
+                                
                                    
                                       
                                    
@@ -101,8 +105,7 @@
 
                                     <td> 
                                       {{-- <i class="fas fa-edit text-success" > </i>--}}
-                                          <a href="#"  class="btn btn-warning edit btn-sm" > Status  </a>
-                                     
+                                          <a href="#"  class="btn btn-warning edit btn-sm" > Status </a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -182,49 +185,6 @@
                     <form action="/students" method="POST" id="edit_status_form" >
                       @csrf
                       @method('PUT')
-
-
-
-                      {{-- <div class="form-group">
-                        <label >Id</label>
-                        <input type="text" class="form-control" name="id" id="id" placeholder="Enter Id" >
-                      </div> --}}
-
-                        {{-- <div class="form-group">
-                            <label>Date</label>
-                            <input type="text" class="form-control" name="created_at" id="created_at" placeholder="created_at">
-                        </div> --}}
-
-                        {{-- <div class="form-group">
-                            <label>First Name</label>
-                            <input type="text"  class="form-control" name="First_Name" id="First_Name" placeholder="First Name">
-                        </div> --}}
-
-                        {{-- <div class="form-group">
-                            <label>Last Name</label>
-                            <input type="text" class="form-control" name="Last_Name" id="Last_Name" placeholder="Last Name">
-                        </div> --}}
-
-                        {{-- <div class="form-group">
-                            <label >Gender</label>
-                            <input type="text"  class="form-control" name="Gender" id="Gender" placeholder="Gender">
-                        </div> --}}
-
-                        {{-- <div class="form-group">
-                            <label >Grade</label>
-                            <input type="text"  class="form-control" name="Grade_Level" id="Grade_Level" placeholder="Grade Levelr">
-                        </div> --}}
-
-
-                        {{-- <div class="form-group">
-                            <label >Contact</label>
-                            <input type="text"  class="form-control" name="Parents_Contact" id="Parents_Contact" placeholder="Parents Contact">
-                        </div> --}}
-
-                        {{-- <div class="form-group">
-                            <label>Email</label>
-                            <input type="text"  class="form-control" name="Parents_Email" id="Parents_Email" placeholder="Parents Email">
-                        </div> --}}
 
                         <div class="form-check">
                             <input type="radio" class="form-check-input" name="Status" value="pending"  id="Status" >
